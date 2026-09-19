@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnicoNIS - Compliance NIS2 & AI Remediation per Data Center Aziendali</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #0d9488;
+            --accent-color: #10b981;
+            --alert-color: #f59e0b;
+            --raci-color: #2563eb;
+            --text-color: #1e293b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #115e59);
+            color: #ffffff;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.15rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border: 1px solid #86efac;
+            border-left: 6px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            color: #166534;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .raci-highlight-box {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border: 1px solid #bfdbfe;
+            border-left: 6px solid var(--raci-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .raci-highlight-box h3 {
+            margin-top: 0;
+            color: #1e40af;
+            font-size: 1.3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .feature-card {
+            background-color: #ffffff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.2rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .feature-card.flagship {
+            border-left: 6px solid var(--accent-color);
+            background-color: #fafafa;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-size: 1.15rem;
+        }
+
+        .feature-card.flagship h3 {
+            color: #065f46;
+        }
+
+        .feature-card ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        .feature-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-remediation {
+            background-color: #10b981;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 0.5rem;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .roi-box {
+            background-color: #f0fdfa;
+            border: 1px solid #99f6e4;
+            border-left: 5px solid var(--secondary-color);
+            padding: 1.2rem;
+            border-radius: 4px;
+        }
+
+        .roi-box h3 {
+            color: #115e59;
+            margin-top: 0;
+        }
+
+        .roi-box ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>UnicoNIS</h1>
+        <p>Compliance NIS2, Local AI Agents & Remediation Intelligente per Data Center Aziendali</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Executive Summary -->
+        <section class="section">
+            <h2>Executive Summary</h2>
+            <p><strong>UnicoNIS</strong> è il modulo dell'ecosistema Unico ingegnerizzato per garantire la conformità alla <strong>Direttiva NIS2 (UE 2022/2555)</strong> nei Data Center aziendali e nelle infrastrutture critiche. Sfruttando un'architettura ad <strong>Agenti AI Locali (On-Premise)</strong>, la piattaforma esegue l'inventario continuo, analizza il carico dei server, individua pacchetti software compromessi e correla le minacce in tempo reale senza mai condividere dati sensibili all'esterno, fornendo soprattutto <strong>suggerimenti operativi di Remediation guidata</strong>.</p>
+        </section>
+
+        <!-- Flagship Feature Box -->
+        <div class="highlight-box">
+            <h3>⚡ Il Fattore Differenziante: AI Local Remediation Engine</h3>
+            <p>Rilevare un'anomalia non basta: di fronte a un attacco cyber o a una vulnerabilità critica, la direttiva NIS2 impone tempi di reazione immediati (Early Warning 24h). <strong>UnicoNIS non si limita a segnalare il problema, ma genera istantaneamente il piano operativo di Remediation</strong>.</p>
+            <ul>
+                <li><strong>Playbook di Mitigazione Generati da AI:</strong> Elaborazione automatica delle istruzioni di isolamento, patching, rollback o riconfigurazione del carico server.</li>
+                <li><strong>Analisi di Impatto Preventiva:</strong> L'AI locale valuta le conseguenze dell'azione correttiva sui servizi erogati prima della sua esecuzione.</li>
+                <li><strong>One-Click Remediation:</strong> Consente all'amministratore di sistema di applicare la contromisura raccomandata con un solo click validato.</li>
+            </ul>
+        </div>
+
+        <!-- RACI Focus Highlight Box -->
+        <div class="raci-highlight-box">
+            <h3>🛡️ Governance NIS2 & Matrice RACI Native</h3>
+            <p>La Direttiva NIS2 introduce la <strong>responsabilità diretta del Management (CdA e CISO)</strong> per le carenze di sicurezza. UnicoNIS orchestra la cyber-resilienza applicando la <strong>Matrice RACI su ogni evento di sicurezza</strong>:</p>
+            <ul>
+                <li><strong>Tracciabilità delle Scelte:</strong> Registrazione su Log Immutabili (Hash SHA-256) delle raccomandazioni dell'AI, di chi le ha approvate e delle azioni correttive eseguite.</li>
+                <li><strong>Segregazione dei Ruoli:</strong> L'Agente AI locale agisce come esecutore e analista (Responsible), lasciando la decisione finale all'autorità umana preposta (Accountable).</li>
+                <li><strong>Pronto per le Segnalazioni ACN / CSIRT:</strong> Generazione automatica dei report di incidente conformi agli SLA NIS2 (24h / 72h / Report Finale).</li>
+            </ul>
+        </div>
+
+        <!-- Caratteristiche Tecniche -->
+        <section class="section">
+            <h2>Architettura & Funzionalità degli Agenti AI Locali</h2>
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <h3>1. Inventario Dinamico & Software BOM</h3>
+                    <ul>
+                        <li><strong>Asset Discovery Continuo:</strong> Mappatura in tempo reale di server fisici, VM, container e servizi attivi nel Data Center.</li>
+                        <li><strong>Software Bill of Materials (SBOM):</strong> Inventario analitico di tutte le librerie, dipendenze e pacchetti installati.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>2. Pacchetti Compromessi & Supply Chain</h3>
+                    <ul>
+                        <li><strong>Rilevamento Vulnerabilità CVE:</strong> Monitoraggio costante delle librerie a rischio o compromesse.</li>
+                        <li><strong>Supply Chain Security:</strong> Analisi delle anomalie nelle dipendenze software per prevenire attacchi di tipo *Supply Chain Injection*.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>3. Analisi Carico Server & Anomaly Detection</h3>
+                    <ul>
+                        <li><strong>Analisi Comportamentale (UEBA):</strong> L'AI locale apprende la baseline dei consumi di CPU, RAM, I/O e traffico di rete.</li>
+                        <li><strong>Rilevamento Anomalie Improvvise:</strong> Identificazione tempestiva di picchi anomali riconducibili a Cryptojacking, Data Exfiltration o DDoS.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>4. Correlazione Multi-Segnale degli Attacchi</h3>
+                    <ul>
+                        <li><strong>Cross-Data Analysis:</strong> Incrocio automatico tra anomalie di carico, log di sistema, connessioni di rete e pacchetti modificati.</li>
+                        <li><strong>Pattern Recognition:</strong> Identificazione di catene di attacco complesse (Movimento Laterale, Privilege Escalation).</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card flagship" style="grid-column: 1 / -1;">
+                    <h3>5. Remediation Intelligente & Contromisure Guidate <span class="badge-remediation">Core NIS2</span></h3>
+                    <ul>
+                        <li><strong>Suggerimento di Patching & Rollback:</strong> L'AI suggerisce l'aggiornamento mirato del singolo pacchetto compromesso o il ripristino dell'ultimo stato sicuro.</li>
+                        <li><strong>Isolamento Selettivo:</strong> Proposta di regole firewall o segmentazione di rete temporanea per contenere la minaccia senza bloccare l'intero Data Center.</li>
+                        <li><strong>Script di Ripristino Pronti all'Uso:</strong> Generazione di comandi di remediating verificati ed esenti da errori di sintassi per gli operatori SOC/IT.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Matrice RACI NIS2 -->
+        <section class="section">
+            <h2>Matrice RACI per la Gestione Incidenti NIS2</h2>
+            <p>Mappatura formale delle responsabilità distribuita da UnicoNIS all'interno del Data Center:</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attività / Evento di Cyber Security</th>
+                            <th>CISO / Ufficio Compliance</th>
+                            <th>SysAdmin / SOC Team</th>
+                            <th>Agente AI UnicoNIS <br><small>(Local Engine)</small></th>
+                            <th>Direzione / CdA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Inventario Asset & Mappatura SBOM</strong></td>
+                            <td>Consulted (C)</td>
+                            <td>Responsible (R)</td>
+                            <td><strong>Accountable / Auto-Scan (A/R)</strong></td>
+                            <td>Informed (I)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rilevamento Pacchetti Compromessi / CVE</strong></td>
+                            <td>Informed (I)</td>
+                            <td>Responsible (R)</td>
+                            <td><strong>Accountable / Detection (A/R)</strong></td>
+                            <td>Informed (I)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Correlazione Attacchi & Anomalie Carico</strong></td>
+                            <td>Consulted (C)</td>
+                            <td>Responsible (R)</td>
+                            <td><strong>Accountable / Correlation (A/R)</strong></td>
+                            <td>Informed (I)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Generazione Suggerimenti Remediation</strong></td>
+                            <td>Informed (I)</td>
+                            <td>Consulted (C)</td>
+                            <td><strong>Accountable / Generation (A/R)</strong></td>
+                            <td>Informed (I)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Approvazione & Esecuzione Remediation</strong></td>
+                            <td>Consulted (C)</td>
+                            <td><strong>Accountable / Execution (A/R)</strong></td>
+                            <td>Supporto / Scripting (C)</td>
+                            <td>Informed (I)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Segnalazione Incidente NIS2 (ACN/CSIRT 24h)</strong></td>
+                            <td><strong>Accountable / Invia (A)</strong></td>
+                            <td>Responsible (R)</td>
+                            <td>Generazione Bozza Report (C)</td>
+                            <td>Informed (I)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Audit Immutabile & Log Integrity</strong></td>
+                            <td>Informed (I)</td>
+                            <td>Informed (I)</td>
+                            <td><strong>Sigillo SHA-256 Automated (A/R)</strong></td>
+                            <td>Informed (I)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ROI & Compliance Value -->
+        <section class="section">
+            <h2>Valore Strategico e Riduzione del Rischio Legale</h2>
+            <div class="roi-box">
+                <h3>Vantaggi per il Management & la Sicurezza Infrastrutturale</h3>
+                <ul>
+                    <li><strong>Privacy-First & On-Premise:</strong> Gli Agenti AI lavorano all'interno del Data Center. Nessun log, metriche o dati di traffico escono dalla rete aziendale.</li>
+                    <li><strong>Abbattimento del MTTR (Mean Time To Remediate):</strong> Passaggio da ore di analisi manuale a pochi secondi per ricevere il piano di remediation dettagliato.</li>
+                    <li><strong>Protezione dalle Sanzioni NIS2:</strong> Piena conformità agli obblighi di gestione del rischio di cui all'Art. 21 e protezione del CdA da responsabilità personali per negligenza.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; UnicoNIS — AI-Powered Cybersecurity & NIS2 Compliance per Data Center
+    </footer>
+
+</body>
+</html>

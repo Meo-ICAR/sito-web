@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UnicoOAM - Software Gestionale Obblighi OAM e Compliance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0052cc;
+      --primary-hover: #003e99;
+      --secondary: #172b4d;
+      --accent: #ffab00;
+      --success: #36b37e;
+      --danger: #ff5630;
+      --bg-light: #f4f5f7;
+      --card-bg: #ffffff;
+      --text-main: #091e42;
+      --text-muted: #5e6c84;
+      --border: #e2e8f0;
+      --radius: 8px;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.4rem;
+      display: inline-block;
+    }
+
+    .card ul {
+      list-style-type: none;
+    }
+
+    .card ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
+
+    .card ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .highlight-box {
+      background: #eae6ff;
+      border-left: 4px solid #6554c0;
+      padding: 1.2rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 2rem 0;
+    }
+
+    .highlight-box h4 {
+      color: #403294;
+      margin-bottom: 0.5rem;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-top: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: #fafbfc;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-transform: uppercase;
+    }
+
+    .badge-primary { background: #deebff; color: #0747a6; }
+    .badge-success { background: #e3fcef; color: #006644; }
+    .badge-warning { background: #fffae6; color: #172b4d; }
+    .badge-danger { background: #ffebe6; color: #bf2600; }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: var(--secondary);
+      margin: 2.5rem 0 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--secondary);
+      color: white;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>UnicoOAM</h1>
+    <p>La soluzione software completa e integrata per la gestione degli obblighi OAM, Compliance, Audit, Reclami e Antiriciclaggio per Mediatori Creditizi.</p>
+  </header>
+
+  <div class="container">
+
+    <div class="highlight-box">
+      <h4>Integrazione Nativa MediaFacile</h4>
+      <p>UnicoOAM si integra con <strong>MediaFacile</strong> acquisendo in automatico pratiche e provvigioni[cite: 4]. Elimina l'inserimento manuale dei dati ed esclude automaticamente le pratiche non di competenza[cite: 4]. Si richiede solo la gestione di storni provvigionali, modulistica, organigramma e requisiti OAM[cite: 4].</p>
+    </div>
+
+    <h2 class="section-title">Caratteristiche Principali del Sistema</h2>
+    <div class="grid">
+      
+      <div class="card">
+        <h3>Semestrale OAM & Pratiche</h3>
+        <ul>
+          <li>Prospetti automatici: Analitico, Anagrafica, Informativo, Sedi e Prudenziale[cite: 4].</li>
+          <li>Gestione avanzata delle retifiche pratiche e ricalcolo aggregati semestrali con un click[cite: 4].</li>
+          <li>Mappatura dinamica dei codici OAM per tipologia di prodotto (Mutui, Cessione del V, Leasing, Factoring)[cite: 4].</li>
+          <li>Integrazione e riconciliazione degli Istituti Eroganti/Finanziatori con elenchi ufficiali ABI e Banca d'Italia[cite: 4].</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Governance, Audit & Controlli</h3>
+        <ul>
+          <li>Gestione integrata degli Internal Audit, verifiche Compliance e Antiriciclaggio[cite: 4].</li>
+          <li>Modulo di campionamento casuale e stratificato con freeze delle pratiche estratte per garantire imparzialità[cite: 4].</li>
+          <li>Matrix di rischio e scoring automatico basato su checklist e non conformità rilevate[cite: 4].</li>
+          <li>Piani di rientro (CAPA) con escalation automatica in caso di superamento della scadenza[cite: 4].</li>
+          <li>Freeze dell'Audit con calcolo dell'hash crittografico SHA-256 e archiviazione decennale[cite: 4].</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Reclami & Scadenziario</h3>
+        <ul>
+          <li>Tracciamento completo del ciclo di vita con protocollo autogenerato e invariabile (es. REC-2026-00042)[cite: 4].</li>
+          <li>Gestione stringente degli SLA di legge (60 giorni) con avvisi programmati e gestione degli stati di sospensione[cite: 4].</li>
+          <li>Cifratura dei file a riposo (GDPR), controllo antiduplicazione e integrità tramite hash dei documenti[cite: 4].</li>
+          <li>Scadenziario dinamico per requisiti di onorabilità, attestati OAM e invio massivo di solleciti via email[cite: 4].</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Segnalazioni SOS (D.Lgs. 231/2007)</h3>
+        <ul>
+          <li>Massima tutela legale per l'Antiriciclaggio con segregazione estrema dei ruoli e rispetto del divieto di <i>Tipping-Off</i>[cite: 4].</li>
+          <li>Isolamento completo delle SOS dalle pratiche standard del CRM[cite: 4].</li>
+          <li>Visibilità riservata esclusivamente al Responsabile AML e protezione dell'identità del segnalante[cite: 4].</li>
+          <li>Workflow a due livelli con motivazione obbligatoria per archiviazione interna o trasmissione UIF[cite: 4].</li>
+          <li>Audit log di consultazione non ripudiabile ed esportazione protetta per controlli OAM o Guardia di Finanza[cite: 4].</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Funzionalità Avanzate dell'Interfaccia Utente</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Strumento</th>
+            <th>Descrizione Funzionale</th>
+            <th>Beneficio Operativo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Guida Contestuale</strong></td>
+            <td>Sezione informativa superiore presente in ogni schermata con istruzioni d'uso operative[cite: 4].</td>
+            <td>Semplificazione immediata dei processi di inserimento e consultazione[cite: 4].</td>
+          </tr>
+          <tr>
+            <td><strong>Filtri Avanzati & Ricerca</strong></td>
+            <td>Filtraggio multilivello attivabile tramite l'icona imbuto e cancellazione rapida con "X"[cite: 4].</td>
+            <td>Isolamento immediato di dati critici e velocizzazione della ricerca clienti[cite: 4].</td>
+          </tr>
+          <tr>
+            <td><strong>Esportazione Dati</strong></td>
+            <td>Download rapido tramite pulsante dedicato direttamente in formato Excel[cite: 4].</td>
+            <td>Pronta disponibilità di report per analisi offline e rendicontazione[cite: 4].</td>
+          </tr>
+          <tr>
+            <td><strong>Azioni Multiple Massive</strong></td>
+            <td>Selezione multipla dei record per l'esecuzione di comandi in blocco (es. "Emetti Proforma" o "Annulla Provvigioni")[cite: 4].</td>
+            <td>Abbattimento dei tempi operativi e gestione efficiente della rete di produttori[cite: 4].</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-title">Architettura di Sicurezza e Compliance Log</h2>
+    <div class="grid">
+      <div class="card">
+        <h3><span class="badge badge-success">SLA & GDPR</span> Gestione Reclami</h3>
+        <p>Monitoraggio automatizzato dei termini di legge con avvisi schedulati[cite: 4]. Tutti i dati sensibili del cliente (Codice Fiscale, solvibilità) sono protetti con <i>Field-Level Encryption</i> e tracciamento immodificabile delle attività (<i>Activity Logging</i>)[cite: 4].</p>
+      </div>
+
+      <div class="card">
+        <h3><span class="badge badge-danger">SOS 231</span> Modulo Antiriciclaggio</h3>
+        <p>Storage isolato e separato con permessi ultra-restrittivi per i documenti probatori[cite: 4]. Tracking puntuale di ogni consultazione per garantire l'assoluta riservatezza nei confronti delle Autorità e della Rete[cite: 4].</p>
+      </div>
+
+      <div class="card">
+        <h3><span class="badge badge-primary">Audit & CdA</span> Governance & Controls</h3>
+        <p>Ciclo di approvazione multi-livello per verbali d'ispezione con firma interna di presa visione per il CdA/Organismo di Vigilanza e tracciamento CAPA[cite: 4].</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 UnicoOAM - Sistema Integrato Gestione Obblighi OAM e Compliance. Tutti i diritti riservati.</p>
+  </footer>
+
+</body>
+</html>

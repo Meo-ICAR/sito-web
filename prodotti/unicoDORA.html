@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnicoDORA — Modulo Resilienza Operativa Digitale ICT | Suite UNICO</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #4f46e5;
+            --accent-color: #10b981;
+            --warning-color: #d97706;
+            --quantum-color: #9333ea;
+            --text-color: #1e293b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #312e81);
+            color: #ffffff;
+            padding: 3.5rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 0.8rem 0;
+            font-size: 2.6rem;
+            letter-spacing: -0.5px;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .badge-header {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 0.35rem 0.95rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-bar {
+            background-color: #1e293b;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .nav-bar a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-bar a:hover {
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1250px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.2rem;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .feature-card p {
+            margin: 0 0 0.8rem 0;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        .feature-card ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .feature-card ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border: 1px solid #bfdbfe;
+            border-left: 6px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box.quantum {
+            background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+            border: 1px solid #e9d5ff;
+            border-left: 6px solid var(--quantum-color);
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box.quantum h3 { color: #6b21a8; }
+
+        /* Table styling */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="../index.html">← Torna alla Home Suite UNICO</a>
+        <a href="../prospetto-generale.html">Prospetto Generale & Matrice Integrazioni</a>
+    </nav>
+
+    <header>
+        <span class="badge-header">Regolamento UE 2022/2554 (DORA)</span>
+        <h1>UnicoDORA</h1>
+        <p>Modulo per la Gestione della Resilienza Operativa Digitale ICT, Registro Fornitori Terzi & Incident Reporting</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Quadro Generale -->
+        <section class="section">
+            <h2>Cos'è UnicoDORA</h2>
+            <p>
+                <strong>UnicoDORA</strong> è il modulo software della Suite UNICO progettato per guidare gli intermediari finanziari, gli istituti di pagamento, le SGR, le società finanziarie ex art. 106 TUB e le imprese assicurative nel pieno rispetto del <strong>Regolamento UE 2022/2554 (Digital Operational Resilience Act)</strong> e delle relative norme tecniche di regolamentazione (RTS/ITS EBA, EIOPA, ESMA).
+            </p>
+            <p>
+                Il sistema digitalizza e automatizza i 5 pilastri della resilienza operativa digitale, garantendo la pronta disponibilità delle evidenze per le Autorità di Vigilanza (Banca d'Italia, IVASS, CONSOB, BCE).
+            </p>
+
+            <div class="highlight-box">
+                <h3 style="color: var(--primary-color);">🎯 Target & Ambito di Applicazione</h3>
+                <p>
+                    Finanziarie ex art. 106 TUB, Istituti di Pagamento (IP), Istituti di Moneta Elettronica (IMEL), SGR, Banche, Intermediari Assicurativi e Creditizi soggetti alla normativa di vigilanza sulla resilienza ICT.
+                </p>
+            </div>
+        </section>
+
+        <!-- Funzionalità Chiave -->
+        <section class="section">
+            <h2>I 5 Pilastri Presidiati da UnicoDORA</h2>
+
+            <div class="grid-2">
+
+                <!-- Pilastro 1 -->
+                <div class="feature-card">
+                    <h3>1. Registro delle Informazioni (RoI)</h3>
+                    <p>Mappatura e tracciamento strutturato dei fornitori di servizi ICT terzi (terze parti critiche - CTPP).</p>
+                    <ul>
+                        <li>Generazione automatica dei file del Registro secondo gli schemi ITS ufficiali.</li>
+                        <li>Classificazione delle funzioni essenziali o importanti (FEI).</li>
+                        <li>Gestione della catena di sub-fornitura ICT e relative dipendenze.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilastro 2 -->
+                <div class="feature-card">
+                    <h3>2. Gestione & Notifica Incidenti ICT</h3>
+                    <p>Workflow di rilevamento, classificazione e segnalazione temporizzata degli incidenti informatici gravi.</p>
+                    <ul>
+                        <li>Matrice automatica per la valutazione della gravità degli incidenti (SLA 4h / 24h / 72h).</li>
+                        <li>Modelli di notifica pre-compilati per le Autorità Competenti (Banca d'Italia / CSIRT).</li>
+                        <li>Registro cronologico delle interruzioni di servizio e root-cause analysis.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilastro 3 -->
+                <div class="feature-card">
+                    <h3>3. Test di Resilienza Operativa Digitale</h3>
+                    <p>Pianificazione ed esecuzione dei test periodici sui sistemi e sulle infrastrutture informatiche.</p>
+                    <ul>
+                        <li>Pianificazione e tracciamento di Vulnerability Assessment, Penetration Test e TLPT.</li>
+                        <li>Monitoraggio dei piani di rientro (Remediation Plan) a seguito dei test.</li>
+                        <li>Archiviazione provatoria dei report tecnici e delle attestazioni di conformità.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilastro 4 -->
+                <div class="feature-card">
+                    <h3>4. ICT Risk Management & Governance</h3>
+                    <p>Framework di gestione del rischio informatico integrato nei processi decisionali aziendali.</p>
+                    <ul>
+                        <li>Valutazione d'impatto sul business (BIA) e Piani di Continuità Operativa (BCP / DR).</li>
+                        <li>Dashboard executive periodica per il Consiglio di Amministrazione e il Collegio Sindacale.</li>
+                        <li>Metriche KRI (Key Risk Indicators) e KPI aggiornate in tempo reale.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Quantum-Safe Highlight -->
+            <div class="highlight-box quantum">
+                <h3>⚛️ Protezione Post-Quantistica Native (Art. 9 e 16 DORA)</h3>
+                <p>
+                    Grazie all'integrazione nativa con il modulo <strong>UnicoPQC</strong>, UnicoDORA monitora lo stato della crittografia dei fornitore ICT terzi, mappando i rischi legati agli algoritmi vulnerabili al calcolo quantistico e garantendo il rispetto dei requisiti avanzati di <strong>Crypto-Agility</strong> richiesti dai nuovi standard europei.
+                </p>
+            </div>
+        </section>
+
+        <!-- Matrice Integrazioni della Suite -->
+        <section class="section">
+            <h2>Matrice di Integrazione di UnicoDORA nella Suite UNICO</h2>
+            <p>UnicoDORA lavora in perfetta sinergia con gli altri moduli verticali per evitare duplicazioni di dati ed efficientare i controlli:</p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modulo Collegato</th>
+                            <th>Flusso Dati & Interazione</th>
+                            <th>Vantaggio Operativo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>UnicoNIS</strong></td>
+                            <td>Condivisione degli asset IT, delle vulnerabilità hardware/software e segnalazione incrociata degli incidenti cibernetici.</td>
+                            <td>Visione unica della Cyber Security sia sul perimetro DORA che NIS2.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoPQC</strong></td>
+                            <td>Riceve l'inventario crittografico (CBOM) sui servizi terzi e calcola l'indice di rischio Quantum-Safe dei fornitori ICT.</td>
+                            <td>Conformità anticipata ai requisiti di resilienza crittografica.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoGDPR</strong></td>
+                            <td>Sincronizza il Registro dei Fornitori ICT con il Registro dei Responsabili del Trattamento (ex Art. 28 GDPR).</td>
+                            <td>Eliminazione del doppio inserimento per anagrafiche e contratti fornitori.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoBPM</strong></td>
+                            <td>Esegue i workflow di escalation approvativa dei contratti ICT e congela i verbali su Log WORM immodificabili.</td>
+                            <td>Audit trail temporale con valore probatorio legale per gli ispettori.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoConsultant</strong></td>
+                            <td>Esporta l'Health Score DORA aziendale nella console del Consulente o del Risk Manager Multi-Azienda.</td>
+                            <td>Monitoraggio centralizzato di più entità o società del gruppo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Back-Office Service Integration -->
+        <section class="section">
+            <h2>🛠️ Il Servizio di Ingestione Dati in Back-Office</h2>
+            <p>
+                La conformità DORA richiede l'inserimento di un'ingente quantità di dati contrattuali relativi alla filiera dei fornitori ICT. La Suite UNICO include un <strong>Service di Back-Office dedicato</strong> che assiste l'azienda in:
+            </p>
+            <ul>
+                <li><strong>Estrazione e Censimento Contratti:</strong> Bonifica dei contratti esistenti con i fornitori ICT terzi per l'estrazione delle clausole obbligatorie (SLA, location dati, audit right,exit strategy).</li>
+                <li><strong>Popolamento del Registro delle Informazioni:</strong> Caricamento iniziale assistito per garantire la correttezza della struttura DORA ITS.</li>
+                <li><strong>Mantenimento Continuo:</strong> Supporto periodico per l'aggiornamento dei rinnovi, delle variazioni contrattuali e dei sub-fornitori.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; Suite UNICO — UnicoDORA: Gestione Resilienza Operativa Digitale & Compliance DORA
+    </footer>
+
+</body>
+</html>

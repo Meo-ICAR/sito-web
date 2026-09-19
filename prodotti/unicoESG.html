@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnicoESG — Governance Sustainability, CSRD & ESG Rating Engine | Suite UNICO</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #059669; /* Emerald ESG Green */
+            --accent-color: #10b981;
+            --warning-color: #d97706;
+            --quantum-color: #9333ea;
+            --text-color: #1e293b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #064e3b);
+            color: #ffffff;
+            padding: 3.5rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 0.8rem 0;
+            font-size: 2.6rem;
+            letter-spacing: -0.5px;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .badge-header {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 0.35rem 0.95rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-bar {
+            background-color: #1e293b;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .nav-bar a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-bar a:hover {
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1250px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.2rem;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .feature-card p {
+            margin: 0 0 0.8rem 0;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        .feature-card ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .feature-card ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+            border: 1px solid #a7f3d0;
+            border-left: 6px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box.quantum {
+            background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+            border: 1px solid #e9d5ff;
+            border-left: 6px solid var(--quantum-color);
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #065f46;
+        }
+
+        .highlight-box.quantum h3 { color: #6b21a8; }
+
+        /* Table styling */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="../index.html">← Torna alla Home Suite UNICO</a>
+        <a href="../prospetto-generale.html">Prospetto Generale & Matrice Integrazioni</a>
+    </nav>
+
+    <header>
+        <span class="badge-header">Sostenibilità, CSRD & ESG Governance</span>
+        <h1>UnicoESG</h1>
+        <p>Modulo per il Calcolo dei KPI ESG, Doppia Materialità, Reporting CSRD (Standard ESRS) & Due Diligence di Filiera</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Quadro Generale -->
+        <section class="section">
+            <h2>Cos'è UnicoESG</h2>
+            <p>
+                <strong>UnicoESG</strong> è il modulo specializzato della Suite UNICO progettato per guidare imprese, intermediari finanziari e filiere produttive nell'adozione dei criteri di sostenibilità **Ambientale, Sociale e di Governance (ESG)**. 
+            </p>
+            <p>
+                In conformità con la **Direttiva CSRD (Corporate Sustainability Reporting Directive - EU 2022/2464)**, gli standard **ESRS (European Sustainability Reporting Standards)**, la direttiva sulla due diligence **CSDDD** e la **Tassonomia UE**, UnicoESG digitalizza la raccolta dati, automatizza la valutazione di Doppia Materialità e genera bilanci di sostenibilità pronti per l'audit delle terze parti.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🌿 Target & Ambito di Applicazione</h3>
+                <p>
+                    Grandi Imprese soggette a CSRD, PMI quotate e non quotate appartenenti a filiere integrate, Istituti di Credito (SFDR & Rischio ESG del portafoglio crediti), SGR, Holding e Consulenti della sostenibilità aziendale.
+                </p>
+            </div>
+        </section>
+
+        <!-- Funzionalità Chiave -->
+        <section class="section">
+            <h2>I 5 Pilastri Funzionali di UnicoESG</h2>
+
+            <div class="grid-2">
+
+                <!-- Pilastro 1 -->
+                <div class="feature-card">
+                    <h3>1. Environmental (E) & Carbon Footprint</h3>
+                    <p>Mappatura e monitoraggio dell'impatto ambientale e dell'impronta carbonica aziendale.</p>
+                    <ul>
+                        <li>Calcolo delle emissioni GHG secondo il GHG Protocol (Scope 1, Scope 2 e Scope 3).</li>
+                        <li>Monitoraggio dei consumi energetici, gestione rifiuti, risorse idriche e Green IT.</li>
+                        <li>Integrazione con i dati dei Data Center (UnicoNIS) per il calcolo dell'efficienza energetica.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilastro 2 -->
+                <div class="feature-card">
+                    <h3>2. Social (S) & Capitale Umano</h3>
+                    <p>Valutazione dell'impatto sociale interno ed esterno alla filiera d'impresa.</p>
+                    <ul>
+                        <li>Monitoraggio parità salariale (Gender Pay Gap), Diversity, Equity & Inclusion (DEI).</li>
+                        <li>Gestione della salute e sicurezza sul lavoro (ISO 45001) e formazione dei dipendenti.</li>
+                        <li>Valutazione dei diritti umani e sociali nella catena di fornitura (Due Diligence CSDDD).</li>
+                    </ul>
+                </div>
+
+                <!-- Pilastro 3 -->
+                <div class="feature-card">
+                    <h3>3. Governance (G) & Etica d'Impresa</h3>
+                    <p>Presidio delle politiche di gestione, integrità aziendale e trasparenza decisionale.</p>
+                    <ul>
+                        <li>Integrazione con le policy anticorruzione (ISO 37001) e Modello 231.</li>
+                        <li>Etica degli algoritmi, protezione dei dati e sicurezza informatica (UnicoGDPR / UnicoNIS).</li>
+                        <li>Composizione del CdA, diversità di genere e gestione etica dei reclami/whistleblowing.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilastro 4 -->
+                <div class="feature-card">
+                    <h3>4. Analisi di Doppia Materialità & Rating ESG</h3>
+                    <p>Valutazione guidata dall'IA dell'impatto aziendale sul pianeta e dell'impatto finanziario del cambiamento climatico sull'impresa.</p>
+                    <ul>
+                        <li>Matrice guidata di Doppia Materialità (Impact Materiality & Financial Materiality).</li>
+                        <li>Calcolo dell'ESG Health Score in tempo reale per misurare il livello di maturità.</li>
+                        <li>Integrazione con la Tassonomia UE per la classificazione delle attività ecosostenibili (CapEx / OpEx).</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Quantum-Safe Highlight -->
+            <div class="highlight-box quantum">
+                <h3>⚛️ Audit Trail ESG & Certificazione Post-Quantistica (UnicoPQC)</h3>
+                <p>
+                    Tutti i dati e i report generati da UnicoESG vengono automaticamente autenticati con sigillo crittografico immutabile **WORM** e marcati con la tecnologia Quantum-Safe del modulo <strong>UnicoPQC</strong>. Questo protegge il Bilancio di Sostenibilità da contestazioni di *Greenwashing* e garantisce un valore probatorio inattaccabile di fronte ad auditor e investitori.
+                </p>
+            </div>
+        </section>
+
+        <!-- Matrice Integrazioni della Suite -->
+        <section class="section">
+            <h2>Matrice di Integrazione di UnicoESG nella Suite UNICO</h2>
+            <p>UnicoESG sfrutta la struttura integrata della Suite UNICO per raccogliere automaticamente le metriche necessarie senza sforzi duplicati:</p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modulo Collegato</th>
+                            <th>Flusso Dati & Interazione</th>
+                            <th>Vantaggio Operativo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>UnicoGDPR</strong></td>
+                            <td>Fornisce le metriche sulla tutela della privacy dei lavoratori, consensi ed etica del trattamento dati per la sezione Governance & Social.</td>
+                            <td>Dati trasparenti sulla tutela del capitale umano senza violare il GDPR.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoNIS</strong></td>
+                            <td>Raccoglie i dati relativi al consumo energetico dell'infrastruttura IT e ai piani di continuita operativa/cyber-resilienza.</td>
+                            <td>Pieno tracciamento dello Scope 2 e 3 per la componente Green IT.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoDORA</strong></td>
+                            <td>Alimenta l'analisi di due diligence sui fornitori tecnologici terzi (Supply Chain Due Diligence ESG).</td>
+                            <td>Controllo unificato sia del rischio operativo che del rischio reputazionale ESG.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoPQC</strong></td>
+                            <td>Appone la firma Post-Quantistica sui dataset CSRD congelati nel Caveau aziendale.</td>
+                            <td>Inviolabilità dei dati ESG da attacchi informatici presenti e futuri.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoBPM</strong></td>
+                            <td>Orchestra i workflow di raccolta dati distribuita tra i vari dipartimenti aziendali (HR, HSE, Procurement).</td>
+                            <td>Coinvolgimento automatico dei referenti interni con scadenziario rigido.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoConsultant</strong></td>
+                            <td>Fornisce al Consulente o Risk Manager una vista aggregata del livello di sostenibilità dei clienti.</td>
+                            <td>Possibilità per gli studi legali/commerciali di offrire servizi di Sustainability Advisory.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Back-Office Service Integration -->
+        <section class="section">
+            <h2>🛠️ Il Servizio di Ingestione Dati in Back-Office</h2>
+            <p>
+                La rendicontazione di sostenibilità richiede la raccolta di centinaia di indicatori sparsi tra fatture energetiche, contratti di lavoro e questionari fornitori. Il nostro **Service di Back-Office dedicato** supporta l'azienda con:
+            </p>
+            <ul>
+                <li><strong>Estrazione & Ingestione Automatica:</strong> Lettura e digitalizzazione delle bollette energetiche, cedolini e certificazioni di filiera.</li>
+                <li><strong>Somministrazione Questionari Fornitori:</strong> Invio e tracciamento assistito dei questionari ESG per la mappatura della catena di fornitura (Scope 3).</li>
+                <li><strong>Data Quality Check:</strong> Validazione preventiva dei dati prima del calcolo definitivo degli indicatori ESRS.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; Suite UNICO — UnicoESG: Sustainability Governance, CSRD Reporting & ESG Rating
+    </footer>
+
+</body>
+</html>

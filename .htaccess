@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Reindirizza sia la versione HTTP sia la versione con "www" 
+    # verso l'URL canonico HTTPS senza "www"
+    RewriteCond %{HTTP_HOST} ^www\.unicocompilance\.it$ [NC,OR]
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://unicocompilance.it/$1 [R=301,L]
+</IfModule>

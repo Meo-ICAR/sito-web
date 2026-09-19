@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richiesta Inviata | Suite UNICO</title>
+    <meta name="description" content="Grazie per aver richiesto le credenziali DEMO della Suite UNICO. Riceverai le istruzioni a breve.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thankyou-box {
+            background-color: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            max-width: 680px;
+            margin: 4rem auto;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .thankyou-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .thankyou-box h1 {
+            color: #0f172a;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .thankyou-box p {
+            font-size: 1.05rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.9rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder Header Dinamico -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <div class="thankyou-box">
+            <span class="thankyou-icon">🎉</span>
+            <h1>Richiesta Inviata con Successo!</h1>
+            <p>Grazie per l'interesse dimostrato nei confronti della <strong>Suite UNICO</strong>.<br>
+            Abbiamo inviato una riepilogativa all'indirizzo e-mail specificato. Un nostro specialista predisporrà le credenziali DEMO riservate entro 24 ore lavorative.</p>
+            
+            <a href="index.html" class="btn-home">← Torna alla Home Page</a>
+        </div>
+    </div>
+
+    <!-- Placeholder Footer Dinamico -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+
+</body>
+</html>

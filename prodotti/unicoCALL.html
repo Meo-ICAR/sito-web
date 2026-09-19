@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnicoCALL - Telemarketing Compliance, Decreto Bollette & Privacy VoIP</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #d97706;
+            --accent-color: #10b981;
+            --raci-color: #6366f1;
+            --text-color: #1e293b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #b45309);
+            color: #ffffff;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.15rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .raci-highlight-box {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border: 1px solid #fcd34d;
+            border-left: 6px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .raci-highlight-box h3 {
+            margin-top: 0;
+            color: #92400e;
+            font-size: 1.3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .feature-card {
+            background-color: #ffffff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.2rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .feature-card.highlight {
+            border-left: 6px solid #e11d48;
+            background-color: #fff1f2;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-size: 1.15rem;
+        }
+
+        .feature-card.highlight h3 {
+            color: #9f1239;
+        }
+
+        .feature-card ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        .feature-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 0.5rem;
+        }
+
+        .badge-utility {
+            background-color: #e11d48;
+            color: white;
+        }
+
+        .badge-voip {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .roi-box {
+            background-color: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-left: 5px solid var(--accent-color);
+            padding: 1.2rem;
+            border-radius: 4px;
+        }
+
+        .roi-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .roi-box ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>UnicoCALL</h1>
+        <p>Verticale UnicoGDPR per Call Center, Decreto Bollette, Robocall & Compliance VoIP</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Executive Summary -->
+        <section class="section">
+            <h2>Executive Summary</h2>
+            <p><strong>UnicoCALL</strong> è il modulo verticale di UnicoGDPR ingegnerizzato per rispondere alle rigorose normative sul Telemarketing, alla disciplina delle <strong>Robocall</strong>, alle prescrizioni del <strong>Decreto Bollette / Trasparenza Contratti Energy</strong> e al controllo dei flussi <strong>VoIP e CRM</strong>. Disegnato per Call Center in-bound/out-bound, Agenzie e Mandatarie, UnicoCALL garantisce che ogni singola chiamata rispetti la catena di consenso, proteggendo la rete agenziale e i Brand mandanti da sanzioni del Garante Privacy e dell'AGCM.</p>
+        </section>
+
+        <!-- Focus Decreto Bollette & Mandatarie -->
+        <div class="raci-highlight-box">
+            <h3>📜 Governance Mandataria & Decreto Bollette</h3>
+            <p>Le nuove disposizioni normative (Decreto Bollette / Delibere ARERA / Codice di Condotta Telemarketing) impongono la massima trasparenza nelle vendite telefoniche di contratti luce e gas e la tracciabilità millimetrica della catena di sub-appalto dei Call Center.</p>
+            <ul>
+                <li><strong>Registro Privacy per Mandataria:</strong> Ciascuna società mandante (Mandataria) visualizza ed elenca <em>esclusivamente</em> gli operatori di call center e teleseller autorizzati che lavorano sulle sue specifiche campagne.</li>
+                <li><strong>Verifica Consenso Pre-Contrattuale:</strong> Validazione automatica del doppio opt-in e verifica RPO (Registro Pubblico delle Opposizioni) prima dell'invio della conferma contrattuale su mezzo durevole.</li>
+                <li><strong>Archiviazione Cifrata Vocale:</strong> Registrazione delle conferme contrattuali (Verbal Binding) con marcatura temporale e vincolo di conservazione a norma.</li>
+            </ul>
+        </div>
+
+        <!-- Caratteristiche Chiave UnicoCALL -->
+        <section class="section">
+            <h2>Funzionalità Specialistiche di UnicoCALL</h2>
+            <div class="features-grid">
+
+                <div class="feature-card highlight">
+                    <h3>1. Conformità Decreto Bollette & Utility <span class="badge badge-utility">Energy</span></h3>
+                    <ul>
+                        <li><strong>Checklist Pre-Chiamata Obbligatoria:</strong> Verifica preventiva dell'informativa e del modulo di riepilogo contrattuale prima della chiusura della vendita.</li>
+                        <li><strong>Trasparenza CLI (Calling Line Identification):</strong> Controllo della rispondenza dei numeri usati al Registro dei Numeri Nazionali AGCOM.</li>
+                        <li><strong>Piattaforma di Validazione Contratti:</strong> Integrazione tra audio-registrazione, scheda cliente e invio OTP/SMS per la validazione della volontà.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>2. Gestione Robocall & Anti-Spam</h3>
+                    <ul>
+                        <li><strong>Filtro Dialing Automatizzato:</strong> Blocco preventivo delle campagne automatiche (robocall) verso numeri iscritti al RPO o sprovvisti di consenso di terze parti valido.</li>
+                        <li><strong>Check Catena di Consenso:</strong> Tracciamento della lead generation e della provenienza del consenso (Lender/Publisher) fino all'origine.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>3. Registro Privacy Esclusivo per Mandataria</h3>
+                    <ul>
+                        <li><strong>Vista Segregata per Brand:</strong> Ogni Mandataria accede al proprio portale per consultare solo gli operatori (Incaricati ex Art. 29 / Art. 28) assegnati alle sue commesse.</li>
+                        <li><strong>Gestione Turni e Nomine:</strong> Generazione e firma digitale automatica delle lettere di autorizzazione e istruzioni privacy per ciascun operatore di call center.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>4. Compliance CRM & Flussi VoIP <span class="badge badge-voip">VoIP/API</span></h3>
+                    <ul>
+                        <li><strong>API Gateway per Dialers & PBX:</strong> Integrazione nativa con Asterisk, Vicidial, FreePBX, Genesys e CRM di mercato.</li>
+                        <li><strong>Informativa Breve Iniziale Automatizzata:</strong> Blocco della chiamata outbound se il centralino non eroga il messaggio d'informativa breve e consenso alla registrazione audio.</li>
+                        <li><strong>Retention & Encrypted Storage:</strong> Cifratura *at-rest* dei file audio delle chiamate e cancellazione automatizzata in base alla policy di retention impostata.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" style="grid-column: 1 / -1;">
+                    <h3>5. Gestione Reclami Privacy, Blacklist & Black-out Opposizioni</h3>
+                    <ul>
+                        <li><strong>Workflow Reclami Automatizzato:</strong> Presa in carico istantanea delle richieste di disiscrizione (Opt-Out), rettifica o reclamo per contatti sgraditi con tracciamento SLA (risposta entro 30gg).</li>
+                        <li><strong>Blacklist Centralizzata Multicampagna:</strong> L'iscrizione di un contatto nella Do-Not-Call List aziendale propaga immediatamente il blocco su tutti i dialer e su tutte le mandatarie.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Matrice RACI UnicoCALL -->
+        <section class="section">
+            <h2>Matrice RACI Telemarketing & Call Center Governance</h2>
+            <p>Ripartizione automatizzata delle responsabilità applicata da UnicoCALL durante l'esecuzione delle campagne telefoniche:</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attività / Flusso Operativo</th>
+                            <th>Mandataria <br><small>(Brand / Committente)</small></th>
+                            <th>Call Center Manager <br><small>(Resp. Struttura)</small></th>
+                            <th>Operatore / Teleseller <br><small>(Incaricato)</small></th>
+                            <th>UnicoCALL Engine <br><small>(Automation & Audit Log)</small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Assegnazione Operatori a Registro Mandataria</strong></td>
+                            <td>Consulted (C)</td>
+                            <td><strong>Accountable / Responsible (A/R)</strong></td>
+                            <td>Informed (I)</td>
+                            <td>Generazione Nomina & Registro</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Scratch / Check RPO & Consensi Pre-Chiamata</strong></td>
+                            <td>Informed (I)</td>
+                            <td>Responsible (R)</td>
+                            <td>Informed (I)</td>
+                            <td><strong>Accountable / Auto-Filter (A/R)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conformità Script & Decreto Bollette</strong></td>
+                            <td><strong>Accountable (A)</strong></td>
+                            <td>Responsible (R)</td>
+                            <td>Esecuzione (R)</td>
+                            <td>Audit Trail Scripting & Check-list</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Consenso Registrazione VoIP & Storage Audio</strong></td>
+                            <td>Informed (I)</td>
+                            <td>Informed (I)</td>
+                            <td>Responsible (R)</td>
+                            <td><strong>Cifratura & Archiviazione (A/R)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gestione Opt-Out / Reclami Privacy</strong></td>
+                            <td>Informed (I)</td>
+                            <td><strong>Accountable (A)</strong></td>
+                            <td>Responsible (R)</td>
+                            <td>Blacklist Auto-Sync su CRM/Dialer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Log delle Chiamate & Proof of Compliance</strong></td>
+                            <td>Informed (I)</td>
+                            <td>Informed (I)</td>
+                            <td>Informed (I)</td>
+                            <td><strong>Hash SHA-256 Immutabile (A/R)</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ROI & Benefici Call Center -->
+        <section class="section">
+            <h2>Valore Strategico per Call Center, BPO e Mandatarie</h2>
+            <div class="roi-box">
+                <h3>Perché Scegliere UnicoCALL</h3>
+                <ul>
+                    <li><strong>Azzeramento Sanzioni Privacy:</strong> Protezione completa contro le sanzioni del Garante (fino al 4% del fatturato globale) grazie al blocco preventivo dei contatti non autorizzati.</li>
+                    <li><strong>Trasparenza Totale verso le Mandatarie:</strong> Fornisce ai Brand committenti un portale dedicato con la prova inconfutabile che solo operatori autorizzati e formati lavorano sui loro contratti.</li>
+                    <li><strong>Conformità Decreto Bollette "Turn-Key":</strong> Integrazione immediata con i processi di vendita telefonica utility per garantire la validità legale di ogni contratto stipulato via phone-binding.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; UnicoCALL — Telemarketing Compliance & Privacy Governance per Call Center e Mandatarie
+    </footer>
+
+</body>
+</html>

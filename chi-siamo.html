@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo & Service Integrato | Suite UNICO - Hassisto</title>
+    <meta name="description" content="Scopri l'ecosistema di Hassisto S.r.l.: software proprietari, integrazione con Mediafacile e una rete di consulenti compliance accreditati.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Dinamico -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero della Pagina -->
+    <section class="page-hero">
+        <span class="badge-header">L'ECOSISTEMA SUITE UNICO</span>
+        <h1>Tecnologia, Consulenza & Ingestione Dati</h1>
+        <p>Hassisto S.r.l. non fornisce semplicemente software: coordina un Service Integrato che unisce architetture RegTech proprietarie, partnership tecnologiche ed esperti di compliance.</p>
+    </section>
+
+    <div class="container">
+
+        <!-- Sezione 1: Hassisto S.r.l. -->
+        <section class="partner-section">
+            <div class="section-title">
+                <h2>Chi è Hassisto S.r.l.</h2>
+            </div>
+            <p>
+                <strong>Hassisto S.r.l.</strong> è una realtà d'eccellenza specializzata nello sviluppo di soluzioni <strong>RegTech, LegalTech e AI Compliance</strong>. Sviluppiamo e gestiamo la <strong>Suite UNICO</strong>, un ecosistema modulare nato per semplificare e automatizzare l'adeguamento alle normative europee e nazionali più complesse (GDPR, DORA, NIS2, EU AI Act, Whistleblowing, Cifratura Post-Quantistica).
+            </p>
+        </section>
+
+        <!-- Sezione 2: Il Modello a 3 Pilastri -->
+        <section class="partner-section">
+            <div class="section-title">
+                <h2>Il Nostro Modello di Service Integrato</h2>
+            </div>
+            <p>Perché i nostri clienti scelgono Suite UNICO? Perché la tecnologia da sola non basta: offriamo una risposta chiave in mano che copre ogni livello della governance aziendale.</p>
+
+            <div class="service-model-grid">
+                
+                <!-- Pilastro 1 -->
+                <div class="model-card">
+                    <div>
+                        <div class="model-icon">⚙️</div>
+                        <span class="product-badge badge-legal">TECNOLOGIA PROPRIETARIA</span>
+                        <h3>Hassisto Software & AI</h3>
+                        <p>
+                            Gli applicativi verticali della Suite UNICO con algoritmi di analisi dei rischi, gestione documentale WORM, agenti AI e cifratura post-quantistica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pilastro 2 -->
+                <div class="model-card">
+                    <div>
+                        <div class="model-icon">🔌</div>
+                        <span class="product-badge badge-cyber">PARTNER SOFTWARE</span>
+                        <h3>Integrazioni Semplificate</h3>
+                        <p>
+                            Sinergia nativa con software e gestionali partner per garantire l'ingestione e il flusso fluido dei dati senza duplicare il lavoro.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pilastro 3 -->
+                <div class="model-card">
+                    <div>
+                        <div class="model-icon">👥</div>
+                        <span class="product-badge badge-mgmt">NETWORK CONSULENTI</span>
+                        <h3>Competenza Legale e Tecnica</h3>
+                        <p>
+                            Un network selezionato di DPO, Avvocati Tech, CISO e Auditor 231/NIS2 per affiancare le aziende e il nostro Back-Office nelle pratiche più delicate.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sezione 3: Focus Partner Software (Mediafacile) -->
+        <section class="partner-box-mediafacile">
+            <div class="partner-logo-badge">
+                Mediafacile.it
+            </div>
+            <div class="partner-box-content">
+                <span class="product-badge badge-partner">PARTNER TECNOLOGICO UFFICIALE</span>
+                <h3>Integrazione con Mediafacile</h3>
+                <p>
+                    Grazie alla collaborazione strategica con <strong>Mediafacile</strong>, la Suite UNICO si integra perfettamente con soluzioni avanzate per la gestione dei flussi di lavoro aziendali e l'organizzazione dei processi digitali, offrendo ai clienti un'esperienza operativa unificata e senza interruzioni.
+                </p>
+                <a href="https://www.mediafacile.it/index.html" target="_blank" rel="noopener" class="btn-link">Visita il sito Mediafacile.it →</a>
+            </div>
+        </section>
+
+        <!-- Sezione 4: Rete Consulenti -->
+        <section class="partner-section">
+            <div class="section-title">
+                <h2>Rete dei Consulenti & Specialist Accreditate</h2>
+                <a href="partner.html" class="btn-link">Vedi la Rete dei Partner & Consulenti →</a>
+            </div>
+            <p>
+                Il valore della Suite UNICO è potenziato da professionisti qualificati sul territorio nazionale. I nostri consulenti partner gestiscono audit, redazione di DPIA, adeguamenti DORA/NIS2 e supporto legale qualificato, sfruttando il nostro servizio di <strong>Back-Office per l'Ingestione Dati</strong>.
+            </p>
+
+            <div class="consultant-banner">
+                <div class="consultant-info">
+                    <h5>Sei un Consulente Privacy, CISO o Avvocato LegalTech?</h5>
+                    <p>Entra a far parte del Network Accreditate della Suite UNICO. Offri ai tuoi clienti la piattaforma di compliance leader di settore.</p>
+                </div>
+                <a href="richiedi-demo.html" class="btn-consultant">Diventa Partner Accreditato →</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer Dinamico -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+
+</body>
+</html>

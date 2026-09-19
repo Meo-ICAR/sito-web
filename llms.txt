@@ -1,0 +1,19 @@
+# Suite UNICO - RegTech, LegalTech & AI Compliance Platform
+
+> Suite UNICO è l'ecosistema software integrato per la gestione della Compliance Aziendale, Cybersecurity, Regolamentazione AI e Rendicontazione Finanziaria in Italia ed Europa.
+
+## Moduli Software Principali
+
+- [UnicoGDPR](https://unicocompilance.it/prodotti/unicoGDPR.html): Governance Privacy, Registro Trattamenti, DPIA e gestione Data Breach (72h).
+- [UnicoDORA](https://unicocompilance.it/prodotti/unicoDORA.html): Resilienza operativa digitale e gestione fornitori ICT per il settore bancario e finanziario (Reg. UE 2022/2554).
+- [UnicoNIS](https://unicocompilance.it/prodotti/unicoNIS.html): Conformità alla Direttiva NIS2 per infrastrutture critiche e soggetti essenziali/importanti.
+- [UnicoAIACT](https://unicocompilance.it/prodotti/unicoAIACT.html): Censimento AI, valutazione d'impatto sui diritti fondamentali (FRIA) e conformità al Regolamento UE 2024/1689.
+- [UnicoPQC](https://unicocompilance.it/prodotti/unicoPQC.html): Post-Quantum Cryptography, Crypto-Agility e gestione del Post-Quantum Fragility Index.
+- [UnicoWhistle](https://unicocompilance.it/prodotti/unicoWhistle.html): Canale Whistleblowing cifrato end-to-end conforme al D.Lgs. 24/2023.
+- [UnicoOAM](https://unicocompilance.it/prodotti/unicoOAM.html): Prospetti e comunicazioni per la mediazione creditizia e segnalazioni SOS Antiriciclaggio 231.
+
+## Comitato Scientifico e Ricerca
+
+- **Ciro Di Leva**: Enterprise Systems Architect & RegTech Expert (LinkedIn: https://www.linkedin.com/in/ciro-di-leva-pmp-44b24931/)
+- **Pier Giuseppe Meo**: Senior Legal Tech Specialist & Privacy Strategist (LinkedIn: https://www.linkedin.com/in/piergiuseppemeo/)
+- **Paper Zenodo**: Architettura di Osservabilità Full-Stack AI conforme NIS2 (https://zenodo.org/records/20688794)

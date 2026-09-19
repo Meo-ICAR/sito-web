@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnicoWhistle — Gestione Segnalazioni Whistleblowing & Compliance D.Lgs. 24/2023 | Suite UNICO</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #0d9488; /* Secure Teal per Whistleblowing */
+            --accent-color: #14b8a6;
+            --warning-color: #d97706;
+            --quantum-color: #9333ea;
+            --text-color: #1e293b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #115e59);
+            color: #ffffff;
+            padding: 3.5rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 0.8rem 0;
+            font-size: 2.6rem;
+            letter-spacing: -0.5px;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .badge-header {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 0.35rem 0.95rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-bar {
+            background-color: #1e293b;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .nav-bar a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-bar a:hover {
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1250px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.2rem;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .feature-card p {
+            margin: 0 0 0.8rem 0;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        .feature-card ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .feature-card ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdf4, #ccfbf1);
+            border: 1px solid #99f6e4;
+            border-left: 6px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box.quantum {
+            background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+            border: 1px solid #e9d5ff;
+            border-left: 6px solid var(--quantum-color);
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #0f766e;
+        }
+
+        .highlight-box.quantum h3 { color: #6b21a8; }
+
+        /* Table styling */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="../index.html">← Torna alla Home Suite UNICO</a>
+        <a href="../prospetto-generale.html">Prospetto Generale & Matrice Integrazioni</a>
+    </nav>
+
+    <header>
+        <span class="badge-header">D.Lgs. 24/2023 & Direttiva UE 2019/1937</span>
+        <h1>UnicoWhistle</h1>
+        <p>Piattaforma Multicanale Crittografata per la Gestione Riservata delle Segnalazioni Whistleblowing & Tutele Ritorsive</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Quadro Generale -->
+        <section class="section">
+            <h2>Cos'è UnicoWhistle</h2>
+            <p>
+                <strong>UnicoWhistle</strong> è il modulo della Suite UNICO progettato per consentire a imprese private, enti pubblici e gruppi societari di adempiere in totale sicurezza alle disposizioni del <strong>D.Lgs. 24/2023</strong> di attuazione della Direttiva UE 2019/1937 in materia di Whistleblowing.
+            </p>
+            <p>
+                Il sistema garantisce la riservatezza assoluta dell'identità del segnalante (Whistleblower), dei soggetti coinvolti e del contenuto delle segnalazioni mediante cifratura avanzata end-to-end, offrendo canali dedicati (scritti, vocali e incontri diretti) ed eseguendo i workflow istruttori con monitoraggio delle scadenze di legge.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🔒 Target & Ambito di Applicazione</h3>
+                <p>
+                    Aziende private con più di 50 dipendenti o dotate di Modello 231 (a prescindere dai dipendenti), Enti Pubblici, OdV, RPCT, Gestori delle segnalazioni (interni ed esterni) e Studi Legali/Consulenti di Compliance.
+                </p>
+            </div>
+        </section>
+
+        <!-- Funzionalità Chiave -->
+        <section class="section">
+            <h2>I 5 Pilastri Presidiati da UnicoWhistle</h2>
+
+            <div class="grid-2">
+
+                <!-- Pilastro 1 -->
+                <div class="feature-card">
+                    <h3>1. Canali di Segnalazione Multicanale</h3>
+                    <p>Acquisizione sicura delle segnalazioni in forma scritta, orale e mediante incontri in presenza.</p>
+                    <ul>
+                        <li>Webform blindato accessibile tramite codice univoco o QR code (senza log di IP/browser).</li>
+                        <li>Modulo di registrazione vocale con alteratore del timbro vocale integrato.</li>
+                        <li>Gestione della richiesta di incontro diretto con il Gestore della Segnalazione.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilastro 2 -->
+                <div class="feature-card">
+                    <h3>2. Gestione Istruttoria & Scadenziario Legale</h3>
+                    <p>Workflow guidato per il rispetto rigoroso dei termini perentori stabiliti dalla normativa.</p>
+                    <ul>
+                        <li>Alert automatico per il rilascio dell'avviso di ricevimento entro <strong>7 giorni</strong>.</li>
+                        <li>Tracciamento dell'istruttoria con riscontro finale entro <strong>3 mesi</strong> dalla segnalazione.</li>
+                        <li>Chat bidirezionale cifrata e anonima per dialogare con il segnalante e richiedere integrazioni.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilastro 3 -->
+                <div class="feature-card">
+                    <h3>3. Riservatezza & Segregazione dei Ruoli</h3>
+                    <p>Protezione dei dati personali secondo i principi di Privacy by Design e Default (Art. 25 GDPR).</p>
+                    <ul>
+                        <li>Accesso alle informazioni consentito esclusivamente al Gestore autorizzato.</li>
+                        <li>Separazione fisica e logica tra i dati identificativi del segnalante e il corpo del report.</li>
+                        <li>Cifratura dei file allegati (Document Encryption & Key Rotations).</li>
+                    </ul>
+                </div>
+
+                <!-- Pilastro 4 -->
+                <div class="feature-card">
+                    <h3>4. Tutela Anti-Ritorsione & Registro Atti</h3>
+                    <p>Presidio e documentazione a garanzia del divieto di misure ritorsive nei confronti del segnalante.</p>
+                    <ul>
+                        <li>Registro riservato delle segnalazioni e delle misure correttive intraprese.</li>
+                        <li>Integrazione con i protocolli del Modello 231 e il sistema disciplinare aziendale.</li>
+                        <li>Esportazione di report statistici anonimizzati per il Bilancio di Sostenibilità (ESG).</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Quantum-Safe Highlight -->
+            <div class="highlight-box quantum">
+                <h3>⚛️ Inalterabilità Istruttoria & Certificazione Post-Quantistica (UnicoPQC)</h3>
+                <p>
+                    Tutti i log delle operazioni, le notifiche e i verbali di chiusura dell'istruttoria effettuati su UnicoWhistle vengono congelati mediante marcature temporali protette da <strong>UnicoPQC</strong>. Questo impedisce qualsiasi manomissione retroattiva delle prove istruttorie e garantisce la piena difesa dell'ente e del gestore in sede giudiziaria o davanti all'ANAC.
+                </p>
+            </div>
+        </section>
+
+        <!-- Matrice Integrazioni della Suite -->
+        <section class="section">
+            <h2>Matrice di Integrazione di UnicoWhistle nella Suite UNICO</h2>
+            <p>UnicoWhistle si collega all'ecosistema di compliance per facilitare l'azione dei gestori e garantire coerenza normativa:</p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modulo Collegato</th>
+                            <th>Flusso Dati & Interazione</th>
+                            <th>Vantaggio Operativo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>UnicoCyber</strong></td>
+                            <td>Invia segnalazioni di violazione del Modello 231 (Reati Cyber e non solo) direttamente alla console dell'OdV.</td>
+                            <td>Attuazione coordinata del Modello 231 con flusso informativo protetto.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoGDPR</strong></td>
+                            <td>Garantisce l'adempimento della DPIA sul canale Whistleblowing e gestisce i tempi di conservazione (retention max 5 anni).</td>
+                            <td>Protezione totale dai rischi di sanzioni Garante Privacy sulla gestione dei dati.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoESG</strong></td>
+                            <td>Fornisce i KPI sull'etica d'impresa, trasparenza e numero di segnalazioni gestite per la sezione Governance (G) ed ESRS.</td>
+                            <td>Miglioramento del rating di sostenibilità attraverso evidenze oggettive.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoPQC</strong></td>
+                            <td>Appone firme Post-Quantistiche e marche WORM sul registro delle segnalazioni chiuso.</td>
+                            <td>Inviolabilità legale della catena di custodia dei verbali di segnalazione.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoBPM</strong></td>
+                            <td>Invia solleciti automatici e gestisce l'escalation in caso di approssimarsi delle scadenze legali (7/90 giorni).</td>
+                            <td>Zero rischio di decadenza o sanzioni per mancato rispetto dei termini ANAC.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UnicoConsultant</strong></td>
+                            <td>Consente agli avvocati o consulenti esterni nominati come Gestori di operare su più organizzazioni in ambienti segregati.</td>
+                            <td>Console multi-tenant riservata per la gestione esternalizzata del canale.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Back-Office Service Integration -->
+        <section class="section">
+            <h2>🛠️ Il Servizio di Supporto & Gestione in Back-Office</h2>
+            <p>
+                L'attivazione del canale Whistleblowing richiede competenze multidisciplinari (Legale, Privacy, IT). La Suite UNICO offre un **Servizio di Supporto dedicato** che include:
+            </p>
+            <ul>
+                <li><strong>Configurazione & Personalizzazione Portale:</strong> Attivazione del canale personalizzato con informative privacy e regolamenti aziendali idonei.</li>
+                <li><strong>Redazione Disciplinare Whistleblowing:</strong> Predisposizione o revisione delle policy interne da distribuire a dipendenti e collaboratori.</li>
+                <li><strong>Servizio di Gestore Esterno (Opzionale):</strong> Affiancamento o presa in carico del ruolo di Gestore della Segnalazione tramite professionisti e legali qualificati.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; Suite UNICO — UnicoWhistle: Piattaforma Whistleblowing D.Lgs. 24/2023 & Gestione Riservata Segnalazioni
+    </footer>
+
+</body>
+</html>
