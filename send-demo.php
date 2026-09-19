@@ -1,15 +1,19 @@
 <?php
-// Configurazione Redirect e Credenziali SMTP OVH
+// Configurazione Redirect e SMTP OVH
 $redirect_to = "grazie.html";
 
 $smtp_host = "ssl0.ovh.net";
 $smtp_port = 465;
-$smtp_user = "info@unicocompilance.it";
-$smtp_pass = "Demo1234";
+$smtp_user = getenv('SMTP_USER');
+$smtp_pass = getenv('SMTP_PASS');
 
 // Funzione nativa PHP per l'invio via SMTP autenticato
 function invia_email_smtp($to, $subject, $body_html, $reply_to = null) {
     global $smtp_host, $smtp_port, $smtp_user, $smtp_pass;
+
+    if (!is_string($smtp_user) || $smtp_user === '' || !is_string($smtp_pass) || $smtp_pass === '') {
+        return false;
+    }
 
     // Connessione Socket SSL
     $socket = @fsockopen("ssl://" . $smtp_host, $smtp_port, $errno, $errstr, 15);
