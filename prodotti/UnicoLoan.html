@@ -5,25 +5,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UnicoLoan | Gestione pratiche di finanziamento per mediatori creditizi</title>
-    <meta name="description" content="UnicoLoan gestisce le pratiche di finanziamento per mediatori creditizi, acquisendo dati e allegati da email mobile e integrandosi con UnicoBPM.">
+    <meta name="description"
+        content="UnicoLoan gestisce le pratiche di finanziamento per mediatori creditizi, acquisendo dati e allegati da email mobile e integrandosi con UnicoBPM.">
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .loan-hero { background: linear-gradient(135deg, #172554, #1e40af); color: #fff; padding: 4rem 1.5rem; text-align: center; }
-        .loan-hero h1 { margin: 0 0 .7rem; font-size: 2.8rem; }
-        .loan-hero p { max-width: 800px; margin: 0 auto; color: #dbeafe; font-size: 1.15rem; }
-        .loan-section { margin-top: 3rem; }
-        .loan-section h2 { color: var(--primary-color); border-bottom: 3px solid #2563eb; padding-bottom: .55rem; }
-        .loan-copy { max-width: 860px; font-size: 1.05rem; }
-        .loan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.4rem; }
-        .loan-card { background: #fff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 1.25rem; box-shadow: 0 5px 18px rgba(15, 23, 42, .06); }
-        .loan-card h3 { margin-top: 0; color: #1d4ed8; }
-        .workflow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .65rem; align-items: stretch; margin-top: 1.5rem; }
-        .workflow-step { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 7px; padding: 1rem .75rem; color: #1e3a8a; text-align: center; font-weight: 700; }
-        .workflow-step small { display: block; color: #475569; font-weight: 400; margin-top: .35rem; }
-        .loan-note { border-left: 4px solid #2563eb; background: #eff6ff; padding: 1rem 1.15rem; margin-top: 2rem; color: #1e3a8a; }
-        .ai-panel { background: #0f172a; color: #e0f2fe; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
-        .ai-panel strong { color: #7dd3fc; }
-        @media (max-width: 760px) { .loan-hero h1 { font-size: 2.2rem; } .workflow { grid-template-columns: 1fr; } }
+        .loan-hero {
+            background: linear-gradient(135deg, #172554, #1e40af);
+            color: #fff;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .loan-hero h1 {
+            margin: 0 0 .7rem;
+            font-size: 2.8rem;
+        }
+
+        .loan-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #dbeafe;
+            font-size: 1.15rem;
+        }
+
+        .loan-section {
+            margin-top: 3rem;
+        }
+
+        .loan-section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: .55rem;
+        }
+
+        .loan-copy {
+            max-width: 860px;
+            font-size: 1.05rem;
+        }
+
+        .loan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.4rem;
+        }
+
+        .loan-card {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 1.25rem;
+            box-shadow: 0 5px 18px rgba(15, 23, 42, .06);
+        }
+
+        .loan-card h3 {
+            margin-top: 0;
+            color: #1d4ed8;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: .65rem;
+            align-items: stretch;
+            margin-top: 1.5rem;
+        }
+
+        .workflow-step {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 7px;
+            padding: 1rem .75rem;
+            color: #1e3a8a;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .workflow-step small {
+            display: block;
+            color: #475569;
+            font-weight: 400;
+            margin-top: .35rem;
+        }
+
+        .loan-note {
+            border-left: 4px solid #2563eb;
+            background: #eff6ff;
+            padding: 1rem 1.15rem;
+            margin-top: 2rem;
+            color: #1e3a8a;
+        }
+
+        .ai-panel {
+            background: #0f172a;
+            color: #e0f2fe;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .ai-panel strong {
+            color: #7dd3fc;
+        }
+
+        @media (max-width: 760px) {
+            .loan-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -33,17 +125,31 @@
     <section class="loan-hero">
         <span class="badge-header">MEDIAZIONE CREDITIZIA E FINANZIAMENTI</span>
         <h1>UnicoLoan</h1>
-        <p>La gestione delle pratiche di finanziamento, dall'email ricevuta sul cellulare fino al processo operativo collegato a UnicoBPM.</p>
+        <p>La gestione delle pratiche di finanziamento, dall'email ricevuta sul cellulare fino al processo operativo
+            collegato a UnicoBPM.</p>
     </section>
 
     <main class="container">
         <section class="loan-section">
             <h2>Il prodotto</h2>
-            <p class="loan-copy"><strong>UnicoLoan</strong> e una soluzione per il mediatore creditizio che organizza le pratiche di finanziamento e riduce l'inserimento manuale. Il motore AI legge gli allegati ricevuti via email, estrae le informazioni disponibili e prepara la pratica per la lavorazione.</p>
+            <p class="loan-copy"><strong>UnicoLoan</strong> e una soluzione per il mediatore creditizio che organizza le
+                pratiche di finanziamento e riduce l'inserimento manuale. Il motore AI legge gli allegati ricevuti via
+                email, estrae le informazioni disponibili e prepara la pratica per la lavorazione.</p>
             <div class="loan-grid">
-                <div class="loan-card"><h3>Gestione pratiche</h3><p>Raccoglie e organizza le richieste di finanziamento in un unico ambiente operativo.</p></div>
-                <div class="loan-card"><h3>Acquisizione da email mobile</h3><p>Una pratica puo partire dall'invio di una email da cellulare con i documenti allegati, senza dover ricopiare manualmente ogni dato.</p></div>
-                <div class="loan-card"><h3>Integrazione UnicoBPM</h3><p>La pratica puo essere agganciata ai workflow di UnicoBPM per gestire attività, responsabilita e passaggi del processo.</p></div>
+                <div class="loan-card">
+                    <h3>Gestione pratiche</h3>
+                    <p>Raccoglie e organizza le richieste di finanziamento in un unico ambiente operativo.</p>
+                </div>
+                <div class="loan-card">
+                    <h3>Acquisizione da email mobile</h3>
+                    <p>Una pratica puo partire dall'invio di una email da cellulare con i documenti allegati, senza
+                        dover ricopiare manualmente ogni dato.</p>
+                </div>
+                <div class="loan-card">
+                    <h3>Integrazione UnicoBPM</h3>
+                    <p>La pratica puo essere agganciata ai workflow di UnicoBPM per gestire attività, responsabilita e
+                        passaggi del processo.</p>
+                </div>
             </div>
         </section>
 
@@ -56,10 +162,14 @@
                 <div class="workflow-step">4. Pratica<small>Inserimento e organizzazione</small></div>
                 <div class="workflow-step">5. UnicoBPM<small>Workflow opzionale</small></div>
             </div>
-            <div class="ai-panel"><strong>AI documentale:</strong> il motore analizza gli allegati ricevuti e utilizza le informazioni riconosciute per predisporre la pratica di finanziamento. Le regole di validazione, i documenti supportati e le modalità di conferma saranno dettagliati nel manuale utente.</div>
+            <div class="ai-panel"><strong>AI documentale:</strong> il motore analizza gli allegati ricevuti e utilizza
+                le informazioni riconosciute per predisporre la pratica di finanziamento. Le regole di validazione, i
+                documenti supportati e le modalità di conferma saranno dettagliati nel manuale utente.</div>
         </section>
 
-        <div class="loan-note"><strong>Prima bozza:</strong> le funzioni descritte riflettono le indicazioni ricevute. Dopo il manuale potranno essere aggiunti videate, tipologie di finanziamento, campi estratti, controlli, ruoli, stati pratica e dettagli dell'integrazione con UnicoBPM.</div>
+        <div class="loan-note"><strong>Prima bozza:</strong> le funzioni descritte riflettono le indicazioni ricevute.
+            Dopo il manuale potranno essere aggiunti videate, tipologie di finanziamento, campi estratti, controlli,
+            ruoli, stati pratica e dettagli dell'integrazione con UnicoBPM.</div>
     </main>
 
     <div id="footer-placeholder"></div>
