@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicalDB | Gestione pazienti e follow-up per la ricerca medica</title>
+    <meta name="description"
+        content="Bozza di ClinicalDB, soluzione software per organizzare pazienti e follow-up a supporto delle ricerche in ambito medico.">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .clinical-hero {
+            background: linear-gradient(135deg, #164e63, #155e75);
+            color: #fff;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .clinical-hero h1 {
+            margin: 0 0 .7rem;
+            font-size: 2.8rem;
+        }
+
+        .clinical-hero p {
+            max-width: 760px;
+            margin: 0 auto;
+            color: #cffafe;
+            font-size: 1.15rem;
+        }
+
+        .clinical-section {
+            margin-top: 3rem;
+        }
+
+        .clinical-section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid #0891b2;
+            padding-bottom: .55rem;
+        }
+
+        .clinical-copy {
+            max-width: 850px;
+            font-size: 1.05rem;
+        }
+
+        .clinical-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.4rem;
+        }
+
+        .clinical-card {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 1.25rem;
+            box-shadow: 0 5px 18px rgba(15, 23, 42, .06);
+        }
+
+        .clinical-card h3 {
+            margin-top: 0;
+            color: #0e7490;
+        }
+
+        .draft-note {
+            border-left: 4px solid #f59e0b;
+            background: #fffbeb;
+            padding: 1rem 1.15rem;
+            margin-top: 2rem;
+            color: #78350f;
+        }
+
+        .data-model {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            align-items: center;
+            gap: .7rem;
+            margin-top: 1.5rem;
+        }
+
+        .data-node {
+            background: #ecfeff;
+            border: 1px solid #a5f3fc;
+            border-radius: 7px;
+            padding: 1rem;
+            text-align: center;
+            color: #155e75;
+            font-weight: 700;
+        }
+
+        .data-arrow {
+            color: #0891b2;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        @media (max-width: 650px) {
+            .clinical-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .data-model {
+                grid-template-columns: 1fr;
+            }
+
+            .data-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="clinical-hero">
+        <span class="badge-header">RICERCA MEDICA E FOLLOW-UP</span>
+        <h1>ClinicalDB</h1>
+        <p>Una base organizzata per memorizzare i pazienti e seguire nel tempo l'evoluzione dei percorsi clinici e delle
+            ricerche mediche.</p>
+    </section>
+
+    <main class="container">
+        <section class="clinical-section">
+            <h2>Bozza di posizionamento</h2>
+            <p class="clinical-copy"><strong>ClinicalDB</strong> e una soluzione software pensata per supportare la
+                ricerca in ambito medico attraverso la raccolta strutturata delle informazioni sui pazienti e la
+                gestione dei relativi follow-up.</p>
+            <div class="clinical-grid">
+                <div class="clinical-card">
+                    <h3>Anagrafica pazienti</h3>
+                    <p>Memorizzazione organizzata delle informazioni necessarie a identificare e seguire i pazienti
+                        coinvolti nei percorsi di ricerca.</p>
+                </div>
+                <div class="clinical-card">
+                    <h3>Follow-up nel tempo</h3>
+                    <p>Registrazione delle osservazioni e degli aggiornamenti successivi, per mantenere la continuita
+                        del percorso clinico.</p>
+                </div>
+                <div class="clinical-card">
+                    <h3>Supporto alla ricerca</h3>
+                    <p>Struttura dati pensata per rendere piu ordinata la consultazione delle informazioni raccolte
+                        durante lo studio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="clinical-section">
+            <h2>Modello concettuale preliminare</h2>
+            <p>La bozza organizza il percorso informativo in tre livelli collegati. Nomi dei campi, schede, permessi e
+                flussi saranno definiti dopo la lettura del manuale utente.</p>
+            <div class="data-model">
+                <div class="data-node">Paziente<br><small>Anagrafica di riferimento</small></div>
+                <div class="data-arrow">→</div>
+                <div class="data-node">Percorso clinico<br><small>Studio o ricerca</small></div>
+                <div class="data-arrow">→</div>
+                <div class="data-node">Follow-up<br><small>Osservazioni successive</small></div>
+            </div>
+        </section>
+
+        <div class="draft-note"><strong>Bozza in attesa del manuale:</strong> questa scheda contiene soltanto le
+            funzioni comunicate finora. Dopo il manuale potranno essere aggiunti videate, workflow, ruoli, filtri,
+            esportazioni, integrazioni e dettagli sulla sicurezza dei dati.</div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAIshboard | Cruscotto grafico per dati clinici</title>
+    <meta name="description"
+        content="DAIshboard esplora coorti cliniche con dashboard, tabelle, grafici, filtri, drill-down e assistente dati in sola lettura.">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .dashboard-hero {
+            background: linear-gradient(135deg, #082f49, #0f766e);
+            color: #fff;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .dashboard-hero h1 {
+            margin: 0 0 .7rem;
+            font-size: 2.8rem;
+        }
+
+        .dashboard-hero p {
+            max-width: 760px;
+            margin: 0 auto;
+            color: #ccfbf1;
+            font-size: 1.15rem;
+        }
+
+        .dashboard-section {
+            margin-top: 3rem;
+        }
+
+        .dashboard-section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid #0f766e;
+            padding-bottom: .55rem;
+        }
+
+        .dashboard-copy {
+            max-width: 850px;
+            font-size: 1.05rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.4rem;
+        }
+
+        .dashboard-card {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 1.25rem;
+            box-shadow: 0 5px 18px rgba(15, 23, 42, .06);
+        }
+
+        .dashboard-card h3 {
+            margin-top: 0;
+            color: #0f766e;
+        }
+
+        .screen {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, .1);
+        }
+
+        .screen-top {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: .7rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            gap: .5rem;
+            font-size: .82rem;
+        }
+
+        .screen-body {
+            padding: 1rem;
+        }
+
+        .screen-title {
+            color: #0f172a;
+            font-weight: 800;
+            margin: 0 0 .85rem;
+        }
+
+        .screen-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .45rem;
+            margin-bottom: .9rem;
+        }
+
+        .screen-filter {
+            border: 1px solid #99f6e4;
+            background: #ecfeff;
+            color: #115e59;
+            border-radius: 4px;
+            padding: .25rem .5rem;
+            font-size: .75rem;
+        }
+
+        .metric-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: .55rem;
+            margin-bottom: .8rem;
+        }
+
+        .metric {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            padding: .65rem;
+            border-radius: 5px;
+        }
+
+        .metric small {
+            display: block;
+            color: #64748b;
+            font-size: .7rem;
+        }
+
+        .metric strong {
+            color: #0f766e;
+            font-size: 1.2rem;
+        }
+
+        .bars {
+            display: flex;
+            align-items: end;
+            gap: .65rem;
+            height: 115px;
+            padding: .5rem 1rem 0;
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+        .bar {
+            flex: 1;
+            background: #14b8a6;
+            min-height: 14px;
+            border-radius: 3px 3px 0 0;
+            position: relative;
+        }
+
+        .bar:nth-child(2) {
+            background: #0ea5e9;
+        }
+
+        .bar:nth-child(3) {
+            background: #6366f1;
+        }
+
+        .bar:nth-child(4) {
+            background: #f59e0b;
+        }
+
+        .bar span {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #64748b;
+            font-size: .68rem;
+            padding-top: .25rem;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .78rem;
+            background: #fff;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: .5rem;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+
+        .data-table th {
+            color: #334155;
+            background: #f1f5f9;
+        }
+
+        .data-table td:last-child {
+            color: #0f766e;
+            font-weight: 700;
+        }
+
+        .chat {
+            display: grid;
+            gap: .7rem;
+        }
+
+        .chat-bubble {
+            padding: .7rem .85rem;
+            border-radius: 7px;
+            font-size: .82rem;
+            max-width: 92%;
+        }
+
+        .chat-user {
+            background: #ccfbf1;
+            color: #134e4a;
+            justify-self: end;
+        }
+
+        .chat-ai {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+        }
+
+        .query {
+            background: #0f172a;
+            color: #bae6fd;
+            padding: .7rem;
+            border-radius: 5px;
+            font: .72rem/1.45 monospace;
+            overflow-x: auto;
+        }
+
+        .read-only {
+            border-left: 4px solid #0f766e;
+            background: #f0fdfa;
+            padding: 1rem 1.15rem;
+            margin-top: 2rem;
+        }
+
+        .source-link {
+            color: #0f766e;
+            font-weight: 700;
+        }
+
+        @media (max-width: 600px) {
+            .dashboard-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .metric-row {
+                grid-template-columns: 1fr;
+            }
+
+            .screen-top {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="dashboard-hero">
+        <span class="badge-header">ANALYTICS CLINICI IN SOLA LETTURA</span>
+        <h1>DAIshboard</h1>
+        <p>Il cruscotto grafico per esplorare coorti cliniche, pazienti, visite e trattamenti con analisi chiare e
+            verificabili.</p>
+    </section>
+
+    <main class="container">
+        <section class="dashboard-section">
+            <h2>Il prodotto</h2>
+            <p class="dashboard-copy">DAIshboard permette di consultare dashboard gia predisposte, applicare uno studio
+                alla popolazione da analizzare, passare dal dato aggregato ai singoli record e porre domande in
+                linguaggio naturale. Ogni contenuto e filtrato secondo ruolo e visibilita dell'organizzazione.</p>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Coorti sempre coerenti</h3>
+                    <p>Salva filtri per data e valore in uno studio e riutilizzali su tutte le tabelle e i grafici della
+                        dashboard.</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Dal totale al dettaglio</h3>
+                    <p>Il drill-down apre la tabella collegata o genera l'elenco dei record che compongono un aggregato.
+                    </p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Analisi condivisibili</h3>
+                    <p>Esporta le righe visualizzate in Excel o crea un link pubblico di sola lettura con scadenza
+                        configurabile.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cruscotto" class="dashboard-section">
+            <h2>Videata 1 — Cruscotto grafico</h2>
+            <p>Una griglia di grafici a barre, linee, torta o ciambella mostra gli indicatori della dashboard corrente.
+                I filtri dello studio restano visibili e applicati alle analisi.</p>
+            <div class="screen">
+                <div class="screen-top"><strong>DAIshboard / Grafici</strong><span>Studio: Arruolati 2024 ▾</span></div>
+                <div class="screen-body">
+                    <p class="screen-title">Panoramica coorte clinica</p>
+                    <div class="screen-filters"><span class="screen-filter">Data arruolamento: 01/01/2024 -
+                            31/12/2024</span><span class="screen-filter">Stato: attivo</span></div>
+                    <div class="metric-row">
+                        <div class="metric"><small>Pazienti</small><strong>1.284</strong></div>
+                        <div class="metric"><small>Visite</small><strong>3.872</strong></div>
+                        <div class="metric"><small>Trattamenti</small><strong>2.416</strong></div>
+                    </div>
+                    <div class="bars">
+                        <div class="bar" style="height:55%"><span>Q1</span></div>
+                        <div class="bar" style="height:76%"><span>Q2</span></div>
+                        <div class="bar" style="height:92%"><span>Q3</span></div>
+                        <div class="bar" style="height:68%"><span>Q4</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-explorer" class="dashboard-section">
+            <h2>Videata 2 — Tabelle e drill-down</h2>
+            <p>La sezione Tabelle organizza i dati per categoria e dashboard. Ricerca testuale, ordinamento, filtro
+                coorte per data, export Excel e collegamenti ai dettagli supportano l'analisi operativa.</p>
+            <div class="screen">
+                <div class="screen-top"><strong>DAIshboard / Tabelle / Pazienti</strong><span>Esporta Excel &nbsp;
+                        Condividi</span></div>
+                <div class="screen-body">
+                    <p class="screen-title">Pazienti della coorte selezionata <span
+                            style="color:#64748b;font-weight:400">(1.284 righe)</span></p>
+                    <div class="screen-filters"><span class="screen-filter">Cerca: Rossi</span><span
+                            class="screen-filter">Filtro coorte</span><span class="screen-filter">3 figli</span></div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Codice paziente</th>
+                                <th>Data arruolamento</th>
+                                <th>Stato</th>
+                                <th>Visite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PT-00421</td>
+                                <td>12/02/2024</td>
+                                <td>Attivo</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>PT-00422</td>
+                                <td>16/02/2024</td>
+                                <td>Follow-up</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>PT-00423</td>
+                                <td>22/02/2024</td>
+                                <td>Attivo</td>
+                                <td>11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="assistente" class="dashboard-section">
+            <h2>Videata 3 — Assistente dati</h2>
+            <p>L'assistente risponde a domande in linguaggio naturale, propone la query di analisi e mostra il
+                risultato. La query puo diventare un nuovo widget della dashboard.</p>
+            <div class="screen">
+                <div class="screen-top"><strong>DAIshboard / Assistente</strong><span>Conversazioni recenti</span></div>
+                <div class="screen-body chat">
+                    <div class="chat-bubble chat-user">Quanti pazienti sono stati arruolati nel 2024 per stato del fumo?
+                    </div>
+                    <div class="chat-bubble chat-ai">Ho preparato una query di sola lettura sulla coorte selezionata.
+                        Ecco la distribuzione richiesta:</div>
+                    <div class="query">SELECT stato_fumo, COUNT(*) AS pazienti<br>FROM pazienti<br>WHERE
+                        data_arruolamento BETWEEN '2024-01-01' AND '2024-12-31'<br>GROUP BY stato_fumo;</div>
+                    <div><span class="screen-filter">Risultati: 1.284 pazienti</span> <span class="screen-filter">Crea
+                            widget</span></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="read-only"><strong>Sola lettura:</strong> consultare DAIshboard non modifica l'archivio clinico.
+            L'assistente puo leggere lo schema ed eseguire solo query SELECT.</div>
+        <p style="margin-top: 2rem;">Manuale utente: <a class="source-link"
+                href="https://dashboard.archiprevaleat.com/docs/manuale-utente" target="_blank" rel="noopener">leggi la
+                guida completa di DAIshboard →</a></p>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="../main.js"></script>
+</body>
+
+</html>
