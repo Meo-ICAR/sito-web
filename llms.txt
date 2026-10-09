@@ -11,7 +11,7 @@
 - [UnicoPQC](https://unicocompilance.it/prodotti/unicoPQC.html): Post-Quantum Cryptography, Crypto-Agility e gestione del Post-Quantum Fragility Index.
 - [UnicoWhistle](https://unicocompilance.it/prodotti/unicoWhistle.html): Canale Whistleblowing cifrato end-to-end conforme al D.Lgs. 24/2023.
 - [UnicoOAM](https://unicocompilance.it/prodotti/unicoOAM.html): Prospetti e comunicazioni per la mediazione creditizia e segnalazioni SOS Antiriciclaggio 231.
-- [UnicoAgent](https://unicocompilance.it/prodotti/UnicoAgent.html): Assistente WhatsApp per la rete commerciale: richiesta anonima e perfezionamento dei finanziamenti, informativa privacy, documenti letti dall'AI e invio in istruttoria (in sviluppo).
+- [UnicoAgent](https://unicocompilance.it/prodotti/UnicoAgent.html): Assistente WhatsApp per la rete commerciale: richiesta anonima e perfezionamento dei finanziamenti, informativa privacy, documenti letti dall'AI e invio in istruttoria, con preventivatore e CRM MediaFacile.
 
 ## Comitato Scientifico e Ricerca
 
