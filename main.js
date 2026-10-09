@@ -2,22 +2,37 @@
    SUITE UNICO — Global JavaScript (main.js)
    ========================================================================== */
 
+// Cartella dello script (radice del sito): permette alle pagine in /prodotti/
+// di caricare header e footer e di risolvere correttamente i loro link relativi.
+const SITE_BASE = document.currentScript
+    ? new URL('.', document.currentScript.src).href
+    : new URL('/', window.location.href).href;
+
+function loadFragment(file, placeholderId) {
+    return fetch(SITE_BASE + file)
+        .then(res => res.ok ? res.text() : Promise.reject(res.status))
+        .then(data => {
+            const placeholder = document.getElementById(placeholderId);
+            if (!placeholder) return;
+            placeholder.innerHTML = data;
+            placeholder.querySelectorAll('[href], [src]').forEach(el => {
+                ['href', 'src'].forEach(attr => {
+                    const v = el.getAttribute(attr);
+                    if (v && !/^([a-z][a-z0-9+.-]*:|\/|#)/i.test(v)) {
+                        el.setAttribute(attr, SITE_BASE + v);
+                    }
+                });
+            });
+        })
+        .catch(() => { /* header/footer non disponibili: la pagina resta utilizzabile */ });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Caricamento dinamico dell'Header
-    fetch('header.html')
-        .then(res => res.text())
-        .then(data => {
-            const headerPlaceholder = document.getElementById('header-placeholder');
-            if (headerPlaceholder) headerPlaceholder.innerHTML = data;
-        });
+    loadFragment('header.html', 'header-placeholder');
 
     // 2. Caricamento dinamico del Footer
-    fetch('footer.html')
-        .then(res => res.text())
-        .then(data => {
-            const footerPlaceholder = document.getElementById('footer-placeholder');
-            if (footerPlaceholder) footerPlaceholder.innerHTML = data;
-        });
+    loadFragment('footer.html', 'footer-placeholder');
 
     // 3. Inizializzazione del Carosello in Homepage
     initCarousel();
