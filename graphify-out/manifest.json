@@ -1,0 +1,284 @@
+{
+  "main.js": {
+    "mtime": 1785089400.0,
+    "seen": 1791578979.0825598,
+    "ast_hash": "bc808c90293b9e3da4fd30269cef79f4",
+    "semantic_hash": "bc808c90293b9e3da4fd30269cef79f4"
+  },
+  "send-demo.php": {
+    "mtime": 1789814445.1988583,
+    "seen": 1791578979.0825622,
+    "ast_hash": "e5d44ec4fcfc905addb56d9d7f64c7da",
+    "semantic_hash": "e5d44ec4fcfc905addb56d9d7f64c7da"
+  },
+  "send-mail.php": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.0825634,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "chi-siamo.html": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.082564,
+    "ast_hash": "d7fee2aecf8dba0481c1234c6a233954",
+    "semantic_hash": "d7fee2aecf8dba0481c1234c6a233954"
+  },
+  "contatti.html": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.0825646,
+    "ast_hash": "6f6032be37f2a14a15f97cefcde2e1f7",
+    "semantic_hash": "6f6032be37f2a14a15f97cefcde2e1f7"
+  },
+  "ferri.html": {
+    "mtime": 1785222420.0,
+    "seen": 1791578979.082565,
+    "ast_hash": "ae8cadf002e2c0ed936bd099de1f2c41",
+    "semantic_hash": "ae8cadf002e2c0ed936bd099de1f2c41"
+  },
+  "footer.html": {
+    "mtime": 1789914429.2792563,
+    "seen": 1791578979.0825655,
+    "ast_hash": "79118698dc4bf739e1af44f358b98149",
+    "semantic_hash": "79118698dc4bf739e1af44f358b98149"
+  },
+  "grazie.html": {
+    "mtime": 1785089760.0,
+    "seen": 1791578979.0825658,
+    "ast_hash": "f82cde7663e4e24df2c079dd2c4b8c2b",
+    "semantic_hash": "f82cde7663e4e24df2c079dd2c4b8c2b"
+  },
+  "header.html": {
+    "mtime": 1785225180.0,
+    "seen": 1791578979.0825665,
+    "ast_hash": "e767a52cf3e9a9f2e8bd6e9059df575e",
+    "semantic_hash": "e767a52cf3e9a9f2e8bd6e9059df575e"
+  },
+  "index.html": {
+    "mtime": 1785232020.0,
+    "seen": 1791578979.082567,
+    "ast_hash": "b74bcd5618fcc386923f5f62f5fe950e",
+    "semantic_hash": "b74bcd5618fcc386923f5f62f5fe950e"
+  },
+  "llms.txt": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.0825675,
+    "ast_hash": "cb89529e3119b290c242782e91e4bb1b",
+    "semantic_hash": "cb89529e3119b290c242782e91e4bb1b"
+  },
+  "news.html": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.082568,
+    "ast_hash": "9293b1da8c7d3fdae8d5a1b27e694b3e",
+    "semantic_hash": "9293b1da8c7d3fdae8d5a1b27e694b3e"
+  },
+  "note-legali.html": {
+    "mtime": 1785232380.0,
+    "seen": 1791578979.0825684,
+    "ast_hash": "6e8634dfa01221d7b888601f15a07529",
+    "semantic_hash": "6e8634dfa01221d7b888601f15a07529"
+  },
+  "partner.html": {
+    "mtime": 1785311940.0,
+    "seen": 1791578979.082569,
+    "ast_hash": "9bda073fc53c4e6af004d0fc9b8ad9b9",
+    "semantic_hash": "9bda073fc53c4e6af004d0fc9b8ad9b9"
+  },
+  "partners.html": {
+    "mtime": 1785224400.0,
+    "seen": 1791578979.0825691,
+    "ast_hash": "90b3da9ce6e6f0757835a83833549595",
+    "semantic_hash": "90b3da9ce6e6f0757835a83833549595"
+  },
+  "partnerx.html": {
+    "mtime": 1785090060.0,
+    "seen": 1791578979.0825698,
+    "ast_hash": "08f4d64b257e2ed2f745dcd6502766ca",
+    "semantic_hash": "08f4d64b257e2ed2f745dcd6502766ca"
+  },
+  "privacy-cookie.html": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.0825703,
+    "ast_hash": "3e3a9a5ff2d5702003b68f48fd8d2fe5",
+    "semantic_hash": "3e3a9a5ff2d5702003b68f48fd8d2fe5"
+  },
+  "privacy-policy.html": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.0825706,
+    "ast_hash": "e62b4ee10a745663bd286250c284e3d5",
+    "semantic_hash": "e62b4ee10a745663bd286250c284e3d5"
+  },
+  "prodotti.html": {
+    "mtime": 1789914981.9908073,
+    "seen": 1791578979.082571,
+    "ast_hash": "e3a8501c3782d9b1aa47789228b3edbd",
+    "semantic_hash": "e3a8501c3782d9b1aa47789228b3edbd"
+  },
+  "prodotti/ClinicalDB.html": {
+    "mtime": 1789908880.5657372,
+    "seen": 1791578979.0825713,
+    "ast_hash": "d8d322436b385fa29ac72e363ccc4093",
+    "semantic_hash": "d8d322436b385fa29ac72e363ccc4093"
+  },
+  "prodotti/DAIshboard.html": {
+    "mtime": 1789908907.3367476,
+    "seen": 1791578979.0825717,
+    "ast_hash": "273abd6692a911e0e22027083a833feb",
+    "semantic_hash": "273abd6692a911e0e22027083a833feb"
+  },
+  "prodotti/UnicoLoan.html": {
+    "mtime": 1789908893.8672147,
+    "seen": 1791578979.0825722,
+    "ast_hash": "29fa5b31dba65afbdbf510d431aed359",
+    "semantic_hash": "29fa5b31dba65afbdbf510d431aed359"
+  },
+  "prodotti/unicoAIACT.html": {
+    "mtime": 1789914459.356638,
+    "seen": 1791578979.0825727,
+    "ast_hash": "8560094d09c03c4288bea6dda4191150",
+    "semantic_hash": "8560094d09c03c4288bea6dda4191150"
+  },
+  "prodotti/unicoBPM.html": {
+    "mtime": 1789914443.7384555,
+    "seen": 1791578979.0825734,
+    "ast_hash": "314fb56bd5cd6c6a7ba4d595f901707b",
+    "semantic_hash": "314fb56bd5cd6c6a7ba4d595f901707b"
+  },
+  "prodotti/unicoCALL.html": {
+    "mtime": 1789914449.066561,
+    "seen": 1791578979.0825737,
+    "ast_hash": "5922b3c270b54f377e268eaa6d5edd93",
+    "semantic_hash": "5922b3c270b54f377e268eaa6d5edd93"
+  },
+  "prodotti/unicoCOGE.html": {
+    "mtime": 1789914454.301701,
+    "seen": 1791578979.0825741,
+    "ast_hash": "4023082c87ae3f23d213f07f216ece28",
+    "semantic_hash": "4023082c87ae3f23d213f07f216ece28"
+  },
+  "prodotti/unicoConsultant.html": {
+    "mtime": 1789914474.9561598,
+    "seen": 1791578979.0825746,
+    "ast_hash": "51330207c3754e913d3248c0942a836a",
+    "semantic_hash": "51330207c3754e913d3248c0942a836a"
+  },
+  "prodotti/unicoCyber.html": {
+    "mtime": 1789914480.459522,
+    "seen": 1791578979.0825748,
+    "ast_hash": "8c6785c9c9bf89b2fcd819241c70181f",
+    "semantic_hash": "8c6785c9c9bf89b2fcd819241c70181f"
+  },
+  "prodotti/unicoDORA.html": {
+    "mtime": 1789914485.7385294,
+    "seen": 1791578979.0825753,
+    "ast_hash": "69bdbc5ad9c7b638516c8073c53862b7",
+    "semantic_hash": "69bdbc5ad9c7b638516c8073c53862b7"
+  },
+  "prodotti/unicoESG.html": {
+    "mtime": 1789914491.0620894,
+    "seen": 1791578979.0825756,
+    "ast_hash": "861aa5b8bf91b35af213d881c95171c9",
+    "semantic_hash": "861aa5b8bf91b35af213d881c95171c9"
+  },
+  "prodotti/unicoFESR.html": {
+    "mtime": 1789914496.4905536,
+    "seen": 1791578979.082576,
+    "ast_hash": "684782c967009d062cdd60d272398c5f",
+    "semantic_hash": "684782c967009d062cdd60d272398c5f"
+  },
+  "prodotti/unicoFSE.html": {
+    "mtime": 1789908982.019084,
+    "seen": 1791578979.0825768,
+    "ast_hash": "edec80248dab881c24941ee3ecc715db",
+    "semantic_hash": "edec80248dab881c24941ee3ecc715db"
+  },
+  "prodotti/unicoGDPR.html": {
+    "mtime": 1789914438.5232863,
+    "seen": 1791578979.0825772,
+    "ast_hash": "7db010115d6df351146bfeed291ac80d",
+    "semantic_hash": "7db010115d6df351146bfeed291ac80d"
+  },
+  "prodotti/unicoNIS.html": {
+    "mtime": 1789914500.3302157,
+    "seen": 1791578979.0825775,
+    "ast_hash": "aa02987b28a0f0907840d4f7668c6488",
+    "semantic_hash": "aa02987b28a0f0907840d4f7668c6488"
+  },
+  "prodotti/unicoOAM.html": {
+    "mtime": 1789914468.9815986,
+    "seen": 1791578979.082578,
+    "ast_hash": "3b3c3e06b717e17b7edcec5f28de571f",
+    "semantic_hash": "3b3c3e06b717e17b7edcec5f28de571f"
+  },
+  "prodotti/unicoPQC.html": {
+    "mtime": 1789914505.7459583,
+    "seen": 1791578979.0825782,
+    "ast_hash": "2502940801db1e2f27550fed03a8f517",
+    "semantic_hash": "2502940801db1e2f27550fed03a8f517"
+  },
+  "prodotti/unicoWhistle.html": {
+    "mtime": 1789914464.7722943,
+    "seen": 1791578979.0825787,
+    "ast_hash": "4f1dfb1dbb3c4b73abbb359f04f9fac4",
+    "semantic_hash": "4f1dfb1dbb3c4b73abbb359f04f9fac4"
+  },
+  "prospetto_generale.html": {
+    "mtime": 1785090240.0,
+    "seen": 1791578979.082579,
+    "ast_hash": "add15badf826beebf46875b380122763",
+    "semantic_hash": "add15badf826beebf46875b380122763"
+  },
+  "richiedi-demo.html": {
+    "mtime": 1785090420.0,
+    "seen": 1791578979.0825794,
+    "ast_hash": "e2f34426717bc422d3e59e091e3f4bcb",
+    "semantic_hash": "e2f34426717bc422d3e59e091e3f4bcb"
+  },
+  "richiedi-presentazione.html": {
+    "mtime": 1785223560.0,
+    "seen": 1791578979.0825796,
+    "ast_hash": "e2f34426717bc422d3e59e091e3f4bcb",
+    "semantic_hash": "e2f34426717bc422d3e59e091e3f4bcb"
+  },
+  "robots.txt": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.0825803,
+    "ast_hash": "61cbbdbaaa5003a033ec0949879a557b",
+    "semantic_hash": "61cbbdbaaa5003a033ec0949879a557b"
+  },
+  "servizi-backoffice.html": {
+    "mtime": 1785090120.0,
+    "seen": 1791578979.0825808,
+    "ast_hash": "a28ce9d73eae288245da47dea112d88b",
+    "semantic_hash": "a28ce9d73eae288245da47dea112d88b"
+  },
+  "images/elia.png": {
+    "mtime": 1785224340.0,
+    "seen": 1791578979.082581,
+    "ast_hash": "ef2eaedcabfacdd849eb7c5ba0332e5e",
+    "semantic_hash": "ef2eaedcabfacdd849eb7c5ba0332e5e"
+  },
+  "images/mario.jpg": {
+    "mtime": 1785063480.0,
+    "seen": 1791578979.082582,
+    "ast_hash": "31332b2f22e823c325e94e4c676e2436",
+    "semantic_hash": "31332b2f22e823c325e94e4c676e2436"
+  },
+  "images/piero.jpg": {
+    "mtime": 1785063480.0,
+    "seen": 1791578979.0825825,
+    "ast_hash": "5dcb6d3bcef6289136ce95fff4d66d49",
+    "semantic_hash": "5dcb6d3bcef6289136ce95fff4d66d49"
+  },
+  "mario.jpg": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.0825827,
+    "ast_hash": "31332b2f22e823c325e94e4c676e2436",
+    "semantic_hash": "31332b2f22e823c325e94e4c676e2436"
+  },
+  "piero.jpg": {
+    "mtime": 1785074460.0,
+    "seen": 1791578979.0825832,
+    "ast_hash": "5dcb6d3bcef6289136ce95fff4d66d49",
+    "semantic_hash": "5dcb6d3bcef6289136ce95fff4d66d49"
+  }
+}

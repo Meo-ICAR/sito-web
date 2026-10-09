@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnicoAgent | Finanziamenti su WhatsApp per la rete commerciale</title>
+    <meta name="description"
+        content="UnicoAgent è l'assistente WhatsApp con cui agenti e produttori aprono e perfezionano le pratiche di finanziamento: richiesta anonima, informativa privacy, documenti letti dall'AI e invio in istruttoria.">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .agent-hero {
+            background: linear-gradient(135deg, #064e3b, #0f7b5f);
+            color: #fff;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .agent-hero h1 {
+            margin: 0 0 .7rem;
+            font-size: 2.8rem;
+        }
+
+        .agent-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #d1fae5;
+            font-size: 1.15rem;
+        }
+
+        .agent-section {
+            margin-top: 3rem;
+        }
+
+        .agent-section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid #0f7b5f;
+            padding-bottom: .55rem;
+        }
+
+        .agent-copy {
+            max-width: 860px;
+            font-size: 1.05rem;
+        }
+
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.4rem;
+        }
+
+        .agent-card {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 1.25rem;
+            box-shadow: 0 5px 18px rgba(15, 23, 42, .06);
+        }
+
+        .agent-card h3 {
+            margin-top: 0;
+            color: #0f7b5f;
+        }
+
+        .agent-card ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        .phase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.4rem;
+            margin-top: 1.5rem;
+        }
+
+        .phase-box {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 10px;
+            padding: 1.25rem;
+            color: #064e3b;
+        }
+
+        .phase-box h3 {
+            margin-top: 0;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: .65rem;
+            align-items: stretch;
+            margin-top: 1.5rem;
+        }
+
+        .workflow-step {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 7px;
+            padding: 1rem .75rem;
+            color: #065f46;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .workflow-step small {
+            display: block;
+            color: #475569;
+            font-weight: 400;
+            margin-top: .35rem;
+        }
+
+        .chat-demo {
+            max-width: 520px;
+            margin: 1.5rem 0;
+            background: #e7fbe9;
+            border: 1px solid #b7e4c0;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            color: #14301c;
+            font-size: .98rem;
+        }
+
+        .agent-note {
+            border-left: 4px solid #0f7b5f;
+            background: #ecfdf5;
+            padding: 1rem 1.15rem;
+            margin-top: 2rem;
+            color: #064e3b;
+        }
+
+        .ai-panel {
+            background: #0f172a;
+            color: #d1fae5;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .ai-panel strong {
+            color: #6ee7b7;
+        }
+
+        @media (max-width: 760px) {
+            .agent-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .workflow,
+            .phase {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="agent-hero">
+        <span class="badge-header">MEDIAZIONE CREDITIZIA E RETE COMMERCIALE</span>
+        <h1>UnicoAgent</h1>
+        <p>L'assistente WhatsApp con cui agenti e produttori aprono e perfezionano le pratiche di finanziamento,
+            senza gestionali da installare e senza ricopiare dati.</p>
+    </section>
+
+    <main class="container">
+        <section class="agent-section">
+            <h2>Il prodotto</h2>
+            <p class="agent-copy"><strong>UnicoAgent</strong> porta il processo di finanziamento dove lavora la rete
+                commerciale: in chat. L'agente scrive al numero WhatsApp dell'azienda, risponde a domande guidate e
+                invia i documenti del cliente con una foto. Il servizio raccoglie, controlla e ordina le informazioni;
+                la decisione sul finanziamento resta sempre a un istruttore.</p>
+            <div class="agent-grid">
+                <div class="agent-card">
+                    <h3>Tutto in WhatsApp</h3>
+                    <p>Menu, pulsanti e liste guidano l'agente passo dopo passo. Comandi semplici (<em>menu</em>,
+                        <em>indietro</em>, <em>annulla</em>, <em>aiuto</em>) per correggere o ripartire in qualsiasi
+                        momento.
+                    </p>
+                </div>
+                <div class="agent-card">
+                    <h3>Documenti letti dall'AI</h3>
+                    <p>Documento d'identità, codice fiscale e reddito vengono controllati e letti in automatico: i dati
+                        riconosciuti sono proposti all'agente, che li conferma con un tocco.</p>
+                </div>
+                <div class="agent-card">
+                    <h3>Privacy by design</h3>
+                    <p>La richiesta è anonima. I dati personali si raccolgono solo dopo l'informativa privacy firmata
+                        dal cliente e sono cifrati nel database.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="agent-section">
+            <h2>Due fasi: richiesta e perfezionamento</h2>
+            <div class="phase">
+                <div class="phase-box">
+                    <h3>1. Richiedi Finanziamento</h3>
+                    <p>Pratica <strong>anonima</strong>: l'agente sceglie il tipo di finanziamento (prestito personale,
+                        cessione del quinto, finalizzato, mutuo, leasing, aziendale) e risponde a domande a scelta su
+                        importo, durata e profilo. Nessun nome, codice fiscale, telefono o email del cliente.</p>
+                    <p style="margin-bottom:0">Alla conferma riceve un <strong>codice pratica</strong> e, se
+                        l'azienda ha un preventivatore collegato, l'importo minimo e massimo ottenibile.</p>
+                </div>
+                <div class="phase-box">
+                    <h3>2. Perfeziona Finanziamento</h3>
+                    <p>Con il codice pratica l'agente scarica l'informativa privacy, la fa firmare al cliente e la
+                        invia. Poi carica i documenti e completa i dati personali; ogni risposta è controllata.</p>
+                    <p style="margin-bottom:0">Dopo il riepilogo, la pratica parte <strong>in istruttoria</strong> con
+                        dati e allegati.</p>
+                </div>
+            </div>
+            <div class="chat-demo">✅ Richiesta registrata. Codice pratica: <strong>PM-1007-1435</strong>. Conservalo:
+                ti servirà per perfezionare il finanziamento.</div>
+        </section>
+
+        <section class="agent-section">
+            <h2>Flusso operativo</h2>
+            <div class="workflow">
+                <div class="workflow-step">1. Richiesta<small>Dati di profilo, anonimi</small></div>
+                <div class="workflow-step">2. Informativa<small>Privacy firmata dal cliente</small></div>
+                <div class="workflow-step">3. Documenti<small>Foto o PDF via WhatsApp</small></div>
+                <div class="workflow-step">4. Controllo AI<small>Lettura e verifica dei dati</small></div>
+                <div class="workflow-step">5. Istruttoria<small>CRM o email</small></div>
+            </div>
+            <div class="ai-panel"><strong>L'AI propone, l'uomo decide:</strong> l'intelligenza artificiale legge i
+                documenti e segnala i dati difformi, ma non decide mai sull'esito. Finché l'informativa non è
+                verificata, i documenti restano in attesa e non vengono inviati all'AI. Se un documento è rifiutato o
+                serve un'integrazione, l'agente riceve una nota direttamente su WhatsApp.</div>
+        </section>
+
+        <section class="agent-section">
+            <h2>Per l'agente: dal menu alle pratiche</h2>
+            <div class="agent-grid">
+                <div class="agent-card">
+                    <h3>Cosa può fare</h3>
+                    <ul>
+                        <li>Richiedere un nuovo finanziamento</li>
+                        <li>Modificare un preventivo non ancora perfezionato</li>
+                        <li>Perfezionare una pratica con dati e documenti</li>
+                        <li>Controllare lo stato delle proprie pratiche e caricare i documenti mancanti</li>
+                    </ul>
+                </div>
+                <div class="agent-card">
+                    <h3>Riconosce chi scrive</h3>
+                    <p>Se il numero è registrato tra i produttori, il bot saluta per nome e usa la sigla del
+                        produttore nel codice pratica. I numeri sconosciuti sono trattati come segnalatori occasionali:
+                        non vedono gli importi e vengono indirizzati al customer care.</p>
+                </div>
+                <div class="agent-card">
+                    <h3>Controlli a ogni risposta</h3>
+                    <p>Codice fiscale, IBAN, email, scadenza dei documenti e maggiore età vengono validati subito: se
+                        un dato non è valido la domanda si ripete. Se per errore si scrivono dati del cliente nella
+                        fase anonima, il bot li rifiuta.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="agent-section">
+            <h2>Per l'azienda: il pannello di amministrazione</h2>
+            <p class="agent-copy">Chi lavora in istruttoria e chi amministra il servizio dispone di un pannello web
+                per seguire le pratiche e configurare il bot senza programmare.</p>
+            <div class="agent-grid">
+                <div class="agent-card">
+                    <h3>Pratiche e documenti</h3>
+                    <p>Schede con risposte, dati personali, stato di ogni documento e dati letti dall'AI. L'operatore
+                        può approvare, rifiutare con nota, chiedere un'integrazione o richiedere un documento
+                        aggiuntivo.</p>
+                </div>
+                <div class="agent-card">
+                    <h3>Percorsi configurabili</h3>
+                    <p>Domande, opzioni, salti e controlli sono dati modificabili. Si lavora su una copia di prova,
+                        la si prova da WhatsApp e poi si pubblica in produzione.</p>
+                </div>
+                <div class="agent-card">
+                    <h3>Dashboard e anagrafiche</h3>
+                    <p>Cosa fare adesso (documenti rifiutati, informative da verificare), stato di WhatsApp e AI,
+                        pratiche in scadenza; gestione di azienda, produttori e utenti.</p>
+                </div>
+                <div class="agent-card">
+                    <h3>Invio in istruttoria</h3>
+                    <p>La pratica perfezionata viene inviata al CRM dell'istruttoria o, in alternativa, per email con
+                        dati e allegati. Se l'invio fallisce, l'agente può riprovare e la pratica non risulta
+                        perfezionata finché non va a buon fine.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="agent-section">
+            <h2>Sicurezza e protezione dei dati</h2>
+            <div class="agent-grid">
+                <div class="agent-card">
+                    <h3>Dati cifrati</h3>
+                    <p>I dati personali, inclusi cellulare ed email del cliente, sono cifrati nel database. I
+                        documenti stanno in un archivio privato non raggiungibile da internet.</p>
+                </div>
+                <div class="agent-card">
+                    <h3>Informativa tracciata</h3>
+                    <p>L'informativa firmata è conservata con data e ora di ricezione e di verifica, a prova del
+                        consenso raccolto prima di ogni dato personale.</p>
+                </div>
+                <div class="agent-card">
+                    <h3>Cancellazione automatica</h3>
+                    <p>Le pratiche non perfezionate sono eliminate con i loro file dopo il periodo di conservazione
+                        (30 giorni di default). Ogni agente vede solo le proprie pratiche.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="agent-note"><strong>Integrazione con la Suite:</strong> UnicoAgent completa
+            <a href="UnicoLoan.html">UnicoLoan</a> sul fronte della rete commerciale e può affiancarsi a
+            <a href="unicoBPM.html">UnicoBPM</a> e <a href="unicoOAM.html">UnicoOAM</a> per i processi e gli
+            adempimenti del mediatore creditizio.
+        </div>
+
+        <!-- ===================================================================
+             PRODOTTO IN SVILUPPO
+             =================================================================== -->
+        <div style="text-align: center; background: #fffbeb; color: #92400e; padding: 2rem; border-radius: 8px; margin-top: 1.5rem; border: 2px dashed #f59e0b;">
+            <h2 style="color: #92400e; margin-bottom: 0.5rem; border: none;">🚧 Prodotto in Fase di Sviluppo</h2>
+            <p style="margin-bottom: 1.2rem;">Questo modulo è attualmente in fase di sviluppo. Contattaci per una demo del prototipo o per essere avvisato al momento del rilascio.</p>
+            <a href="../richiedi-demo.html" style="display: inline-block; padding: 0.8rem 1.8rem; background-color: #f59e0b; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">Richiedi Informazioni →</a>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="../main.js"></script>
+</body>
+
+</html>
