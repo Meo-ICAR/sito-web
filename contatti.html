@@ -201,8 +201,8 @@
     <div class="info-card-content">
         <h3>Sede Operativa</h3>
         <p><strong>Via Mercato 16e</strong><br>80018 Mugnano di Napoli (NA)</p>
-        <a href="https://www.google.com/maps/place/Enel+X+Way+Stazione+di+ricarica/@40.9095616,14.2104452,19.16z/data=!4m6!3m5!1s0x133b0665d6e47807:0xdaa8cc2f1bfa06d8!8m2!3d40.9095036!4d14.2102873!16s%2Fg%2F11yj5p2ny2?entry=ttu" target="_blank" rel="noopener" class="btn-maps">
-            🗺️ Apri su Google Maps
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Via+Mercato+16+Mugnano+di+Napoli+NA" target="_blank" rel="noopener" class="btn-maps">
+            Apri su Google Maps
         </a>
     </div>
 </div>
@@ -214,7 +214,7 @@
                             <h3>Email Principale</h3>
                             <p>Per informazioni generali, consulenze o richieste commerciali:</p>
                             <p style="margin-top: 0.4rem;">
-                                <a href="mailto:info@unicofinance.it">info@unicofinance.it</a>
+                                <a href="mailto:info@unicocompilance.it">info@unicocompilance.it</a>
                             </p>
                         </div>
                     </div>
@@ -236,25 +236,25 @@
                     <h2>Invia un Messaggio</h2>
                     <p>Compila il modulo sottostante per essere ricontattato da un nostro specialista.</p>
                     
-                    <form action="send-demo.php" method="POST">
+                    <form action="send-mail.php" method="POST">
                         <div class="form-group">
                             <label for="nome">Nome e Cognome *</label>
-                            <input type="text" id="nome" name="nome" required placeholder="Mario Rossi">
+                            <input type="text" id="nome" name="nome" required placeholder="Mario Rossi" autocomplete="name">
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email Aziendale *</label>
-                            <input type="email" id="email" name="email" required placeholder="mario.rossi@azienda.it">
+                            <input type="email" id="email" name="email" required placeholder="mario.rossi@azienda.it" autocomplete="email">
                         </div>
 
                         <div class="form-group">
                             <label for="telefono">Telefono *</label>
-                            <input type="tel" id="telefono" name="telefono" required placeholder="+39 081 0000000">
+                            <input type="tel" id="telefono" name="telefono" required placeholder="+39 081 0000000" autocomplete="tel">
                         </div>
 
                         <div class="form-group">
                             <label for="azienda">Azienda / Ente *</label>
-                            <input type="text" id="azienda" name="azienda" required placeholder="Nome Azienda S.r.l.">
+                            <input type="text" id="azienda" name="azienda" required placeholder="Nome Azienda S.r.l." autocomplete="organization">
                         </div>
 
                         <div class="form-group">
@@ -262,8 +262,10 @@
                             <textarea id="messaggio" name="messaggio" rows="4" required placeholder="Scrivi qui la tua richiesta..."></textarea>
                         </div>
 
-                        <!-- Ruolo fittizio di default per compatibilità con lo script send-demo.php -->
-                        <input type="hidden" name="ruolo" value="Richiesta Generica da Pagina Contatti">
+                        <div class="hp-field" aria-hidden="true" style="position:absolute;left:-9999px;height:0;overflow:hidden;">
+                            <label for="website">Sito web</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
 
                         <button type="submit" class="btn-submit">Invia Richiesta</button>
                     </form>
@@ -276,16 +278,7 @@
     <!-- Placeholder Footer Dinamico -->
     <div id="footer-placeholder"></div>
 
-    <!-- JavaScript di Inclusione Header e Footer -->
-    <script>
-        fetch('header.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('header-placeholder').innerHTML = data);
-
-        fetch('footer.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-    </script>
+    <script src="main.js"></script>
 
 </body>
 </html>

@@ -1,9 +1,23 @@
+# Blocca file sensibili
+<FilesMatch "(?i)^(\.env|\.env\..+|smtp-config\.php)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Reindirizza sia la versione HTTP sia la versione con "www" 
-    # verso l'URL canonico HTTPS senza "www"
+    # Dominio mirror + www + HTTP → canonico HTTPS unicocompilance.it
+    RewriteCond %{HTTP_HOST} ^(www\.)?unicocompliance\.it$ [NC,OR]
     RewriteCond %{HTTP_HOST} ^www\.unicocompilance\.it$ [NC,OR]
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://unicocompilance.it/$1 [R=301,L]
+
+    # Vecchio slug con underscore
+    RewriteRule ^prospetto_generale\.html$ /prospetto-generale.html [R=301,L]
 </IfModule>

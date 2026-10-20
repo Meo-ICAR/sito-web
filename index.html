@@ -100,121 +100,104 @@
 
     <!-- Header Dinamico -->
     <div id="header-placeholder"></div>
+    <noscript>
+        <header class="main-header" style="padding:1rem 2rem;">
+            <a href="index.html" class="logo"><span class="logo-accent">SUITE</span> UNICO</a>
+            <nav style="margin-top:0.75rem; display:flex; gap:1rem; flex-wrap:wrap;">
+                <a href="prodotti.html" style="color:#fff;">Soluzioni</a>
+                <a href="chi-siamo.html" style="color:#fff;">Chi Siamo</a>
+                <a href="contatti.html" style="color:#fff;">Contatti</a>
+                <a href="richiedi-demo.html" style="color:#38bdf8;">Prenota Demo</a>
+            </nav>
+        </header>
+    </noscript>
 
     <!-- Hero Section Principale -->
     <section class="hero">
-               <h1>Proteggi l'Azienda & Trasforma la Compliance in Efficienza</h1>
-        <p>Una suite integrata di applicativi verticali potenziati da Agenti AI, Notarizzazione WORM a Valore Probatorio e un Servizio Operativo di Back-Office in Service.</p>
-        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
-            <a href="richiedi-demo.html" class="btn-demo-nav" style="padding: 0.85rem 1.8rem; font-size: 1rem;">Prenota una DEMO Gratuita</a>
-            <a href="prodotti.html" style="background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.3); padding: 0.85rem 1.8rem; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1rem;">Sfoglia il Catalogo ( Moduli)</a>
+        <p class="hero-brand" style="margin:0 0 0.75rem; font-size:1.15rem; font-weight:800; letter-spacing:0.04em; color:#38bdf8;">SUITE UNICO</p>
+        <h1>Proteggi l'azienda e trasforma la compliance in efficienza</h1>
+        <p>Applicativi verticali con Agenti AI, notarizzazione WORM a valore probatorio e back-office operativo in service.</p>
+        <div class="hero-cta" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="richiedi-demo.html" class="btn-demo-nav" style="padding: 0.85rem 1.8rem; font-size: 1rem;">Prenota una DEMO gratuita</a>
+            <a href="prodotti.html" class="btn-hero-secondary" style="background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.3); padding: 0.85rem 1.8rem; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1rem;">Sfoglia il catalogo moduli</a>
         </div>
     </section>
 
     <main class="container" style="margin-top: 1.5rem; margin-bottom: 4rem;">
 
-        <!-- CAROUSEL SOLUZIONI TARGET -->
-        <section class="home-carousel-section" style="margin-top: 1rem; margin-bottom: 3.5rem;">
+        <section class="home-products-section" style="margin-top: 1rem; margin-bottom: 3.5rem;">
             <div class="section-title">
-                <h2>Soluzioni Target di Punta</h2>
+                <h2>Soluzioni target di punta</h2>
                 <a href="prodotti.html" class="btn-link">Vedi tutti i moduli →</a>
             </div>
 
-            <div class="carousel-container">
-                <button class="carousel-btn prev-btn" aria-label="Precedente">&#10094;</button>
-                <button class="carousel-btn next-btn" aria-label="Successivo">&#10095;</button>
-
-                <div class="carousel-track-container">
-                    <ul class="carousel-track">
-                        
-                        <!-- SLIDE 1: UnicoGDPR -->
-                        <li class="carousel-slide current-slide">
-                            <div class="card-product">
-                                <div class="card-target-badge">Target: DPO, Legal & HR</div>
-                                <h3>UnicoGDPR</h3>
-                                <h4>Protezione Garante Privacy & Automazione DSAR</h4>
-                                <p class="card-description">
-                                    Governance Privacy avanzata, Registro Trattamenti e gestione assistita dei Data Breach entro 72 ore. Notarizzazione dei log WORM a pieno valore probatorio legale.
-                                </p>
-                                <ul class="card-benefits">
-                                    <li>🛡️ <strong>Protezione:</strong> Zero sanzioni Garante e gestione emergenze guidata.</li>
-                                    <li>⚡ <strong>Efficienza:</strong> Risposte automatiche alle richieste DSAR degli utenti.</li>
-                                </ul>
-                                <div class="card-actions">
-                                    <a href="prodotti/unicoGDPR.html" class="btn-primary">Scheda UnicoGDPR</a>
-                                    <a href="richiedi-demo.html" class="btn-secondary">Prenota Demo</a>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!-- SLIDE 2: UnicoOAM -->
-                        <li class="carousel-slide">
-                            <div class="card-product">
-                                <div class="card-target-badge">Target: Finanza & Mediazione Creditizia</div>
-                                <h3>UnicoOAM</h3>
-                                <h4>Conformità Creditizia & Caveau Cifrato SOS 231</h4>
-                                <p class="card-description">
-                                    Generazione prospetti OAM e gestione reclami SLA 60gg. Include il Caveau Cifrato Enterprise per la massima riservatezza delle Segnalazioni Antiriciclaggio SOS 231.
-                                </p>
-                                <ul class="card-benefits">
-                                    <li>🛡️ <strong>Protezione:</strong> Piena aderenza alle direttive OAM e Banca d'Italia.</li>
-                                    <li>⚡ <strong>Efficienza:</strong> Service di Back-Office incluso (Zero Data Entry interno).</li>
-                                </ul>
-                                <div class="card-actions">
-                                    <a href="prodotti/unicoOAM.html" class="btn-primary">Scheda UnicoOAM</a>
-                                    <a href="richiedi-demo.html" class="btn-secondary">Prenota Demo</a>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!-- SLIDE 3: UnicoNIS -->
-                        <li class="carousel-slide">
-                            <div class="card-product">
-                                <div class="card-target-badge">Target: CISO, IT Director & Board CdA</div>
-                                <h3>UnicoNIS</h3>
-                                <h4>Scudo Direttiva NIS2 & Tutela Responsabilità C-Level</h4>
-                                <p class="card-description">
-                                    Mappatura e monitoraggio della sicurezza delle reti e della filiera dei fornitori. Flussi operativi guidati per le notifiche di incidente entro 24h e 72h.
-                                </p>
-                                <ul class="card-benefits">
-                                    <li>🛡️ <strong>Protezione:</strong> Tutela la responsabilità civile e amministrativa dei Directors.</li>
-                                    <li>⚡ <strong>Efficienza:</strong> Gestione incidenti immediata senza paralizzare l'IT.</li>
-                                </ul>
-                                <div class="card-actions">
-                                    <a href="prodotti/unicoNIS.html" class="btn-primary">Scheda UnicoNIS</a>
-                                    <a href="richiedi-demo.html" class="btn-secondary">Prenota Demo</a>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!-- SLIDE 4: UnicoBPM -->
-                        <li class="carousel-slide">
-                            <div class="card-product">
-                                <div class="card-target-badge">Target: Operations, COO & Trasversale</div>
-                                <h3>UnicoBPM</h3>
-                                <h4>Il Motore che Elimina l'Excel e la Burocrazia</h4>
-                                <p class="card-description">
-                                    Orchestratore trasversale dei processi aziendali. Integrazione diretta DB Read/Write, AI Policy Check e tracciabilità immutabile di ogni approvazione.
-                                </p>
-                                <ul class="card-benefits">
-                                    <li>🛡️ <strong>Protezione:</strong> Eliminazione totale degli errori procedurali umani.</li>
-                                    <li>⚡ <strong>Efficienza:</strong> -70% nei tempi di approvazione dei flussi interni.</li>
-                                </ul>
-                                <div class="card-actions">
-                                    <a href="prodotti/unicoBPM.html" class="btn-primary">Scheda UnicoBPM</a>
-                                    <a href="richiedi-demo.html" class="btn-secondary">Prenota Demo</a>
-                                </div>
-                            </div>
-                        </li>
-
+            <div class="products-grid-2col">
+                <div class="card-product">
+                    <div class="card-target-badge">Target: DPO, Legal &amp; HR</div>
+                    <h3>UnicoGDPR</h3>
+                    <h4>Protezione Garante Privacy &amp; Automazione DSAR</h4>
+                    <p class="card-description">
+                        Governance Privacy, Registro Trattamenti e gestione assistita dei Data Breach entro 72 ore. Log WORM a valore probatorio.
+                    </p>
+                    <ul class="card-benefits">
+                        <li><strong>Protezione:</strong> gestione emergenze guidata verso il Garante.</li>
+                        <li><strong>Efficienza:</strong> risposte assistite alle richieste DSAR.</li>
                     </ul>
+                    <div class="card-actions">
+                        <a href="prodotti/unicoGDPR.html" class="btn-primary">Scheda UnicoGDPR</a>
+                        <a href="richiedi-demo.html" class="btn-secondary">Prenota Demo</a>
+                    </div>
                 </div>
 
-                <div class="carousel-nav">
-                    <button class="carousel-indicator current-slide"></button>
-                    <button class="carousel-indicator"></button>
-                    <button class="carousel-indicator"></button>
-                    <button class="carousel-indicator"></button>
+                <div class="card-product">
+                    <div class="card-target-badge">Target: Finanza &amp; Mediazione Creditizia</div>
+                    <h3>UnicoOAM</h3>
+                    <h4>Conformità creditizia &amp; caveau cifrato SOS 231</h4>
+                    <p class="card-description">
+                        Prospetti OAM, reclami SLA 60gg e caveau cifrato enterprise per segnalazioni antiriciclaggio SOS 231.
+                    </p>
+                    <ul class="card-benefits">
+                        <li><strong>Protezione:</strong> aderenza a direttive OAM e Banca d'Italia.</li>
+                        <li><strong>Efficienza:</strong> back-office in service incluso.</li>
+                    </ul>
+                    <div class="card-actions">
+                        <a href="prodotti/unicoOAM.html" class="btn-primary">Scheda UnicoOAM</a>
+                        <a href="richiedi-demo.html" class="btn-secondary">Prenota Demo</a>
+                    </div>
+                </div>
+
+                <div class="card-product">
+                    <div class="card-target-badge">Target: CISO, IT Director &amp; Board</div>
+                    <h3>UnicoNIS</h3>
+                    <h4>Scudo direttiva NIS2 &amp; tutela C-Level</h4>
+                    <p class="card-description">
+                        Mappatura sicurezza reti e fornitori. Flussi guidati per notifiche incidente entro 24h e 72h.
+                    </p>
+                    <ul class="card-benefits">
+                        <li><strong>Protezione:</strong> tutela responsabilità civile e amministrativa.</li>
+                        <li><strong>Efficienza:</strong> gestione incidenti senza paralizzare l'IT.</li>
+                    </ul>
+                    <div class="card-actions">
+                        <a href="prodotti/unicoNIS.html" class="btn-primary">Scheda UnicoNIS</a>
+                        <a href="richiedi-demo.html" class="btn-secondary">Prenota Demo</a>
+                    </div>
+                </div>
+
+                <div class="card-product">
+                    <div class="card-target-badge">Target: Operations, COO</div>
+                    <h3>UnicoBPM</h3>
+                    <h4>Il motore che riduce Excel e burocrazia</h4>
+                    <p class="card-description">
+                        Orchestratore processi con integrazione DB, AI Policy Check e tracciabilità immutabile delle approvazioni.
+                    </p>
+                    <ul class="card-benefits">
+                        <li><strong>Protezione:</strong> meno errori procedurali.</li>
+                        <li><strong>Efficienza:</strong> tempi di approvazione ridotti.</li>
+                    </ul>
+                    <div class="card-actions">
+                        <a href="prodotti/unicoBPM.html" class="btn-primary">Scheda UnicoBPM</a>
+                        <a href="richiedi-demo.html" class="btn-secondary">Prenota Demo</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -222,7 +205,7 @@
         <!-- Highlight Servizio Back-Office -->
         <section class="partner-section" style="margin-top: 3rem;">
             <div class="service-highlight">
-                <h3 style="margin-top:0; color:#065f46; font-size:1.5rem;">🛠️ Back-Office Tecnico fornito in Service</h3>
+                <h3 style="margin-top:0; color:#065f46; font-size:1.5rem;">Back-Office tecnico fornito in service</h3>
                 <p>La Suite UNICO viene fornita unitamente al nostro <strong>Servizio Tecnico Operativo</strong> per sollevare la tua struttura dal carico di Data Entry e gestione tracciati.</p>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.2rem;">
                     <div>
