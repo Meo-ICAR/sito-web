@@ -20,4 +20,7 @@
 
     # Vecchio slug con underscore
     RewriteRule ^prospetto_generale\.html$ /prospetto-generale.html [R=301,L]
+
+    # UnicoLoan → UnicoFinance
+    RewriteRule ^prodotti/UnicoLoan\.html$ /prodotti/UnicoFinance.html [R=301,L]
 </IfModule>

@@ -27,12 +27,31 @@ function loadFragment(file, placeholderId) {
         .catch(() => { /* header/footer non disponibili: la pagina resta utilizzabile */ });
 }
 
+function formatPageUpdatedDate() {
+    const d = new Date(document.lastModified);
+    if (Number.isNaN(d.getTime())) return '';
+    const dd = String(d.getDate()).padStart(2, '0');
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const yyyy = d.getFullYear();
+    return `${dd}/${mm}/${yyyy}`;
+}
+
+function fillPageUpdatedDate(root = document) {
+    const el = root.querySelector('#page-updated-date');
+    if (!el) return;
+    const formatted = formatPageUpdatedDate();
+    if (formatted) el.textContent = formatted;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Caricamento dinamico dell'Header
     loadFragment('header.html', 'header-placeholder');
 
-    // 2. Caricamento dinamico del Footer
-    loadFragment('footer.html', 'footer-placeholder');
+    // 2. Caricamento dinamico del Footer (+ data modifica pagina corrente)
+    loadFragment('footer.html', 'footer-placeholder').then(() => {
+        const footer = document.getElementById('footer-placeholder');
+        if (footer) fillPageUpdatedDate(footer);
+    });
 
     // 3. Inizializzazione del Carosello in Homepage
     initCarousel();
